@@ -12,7 +12,7 @@ def route():
         'index.html'
     )
 
-@app.route('/index')
+@app.route('/index',methods=['GET','POST'])
 def index():
     return render_template(
         'index.html'
@@ -40,7 +40,7 @@ def result():
         ]
         
         n = len(INPUT) # 人数
-        g = 6 #グループ数
+        g = int(request.form.get('group_num')) #グループ数
         
         group_class = Grouping(n,g,INPUT)
         groups = group_class.grouping(n, g)
