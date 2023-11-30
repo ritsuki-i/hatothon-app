@@ -22,6 +22,36 @@
             <option value=11>11</option>
             <option value=12>12</option>
         </select></p>
+
+        <div class="get_input">
+            <p>name: <input type="text" name="get_input" required>
+                <select id="mbti" name="get_input">
+                    {% for mbti in mbti_list %}
+                        <option value="{{ mbti }}">{{ mbti }}</option>
+                    {% endfor %}
+                </select></p>
+            <p>name: <input type="text" name="get_input"  required>
+                <select id="mbti" name="get_input">
+                    {% for mbti in mbti_list %}
+                        <option value="{{ mbti }}">{{ mbti }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p>name: <input type="text" name="get_input"  required>
+                <select id="mbti" name="get_input">
+                    {% for mbti in mbti_list %}
+                        <option value="{{ mbti }}">{{ mbti }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p>name: <input type="text" name="get_input">
+                <select id="mbti" name="get_input">
+                    {% for mbti in mbti_list %}
+                        <option value={{ mbti }}>{{ mbti }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+        </div>
         <button type="submit" class="submit" onclick=location.href="{{ url_for('result') }}">結果</button>
     </form>
 </body>

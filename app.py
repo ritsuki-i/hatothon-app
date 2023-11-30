@@ -6,16 +6,33 @@ from grouping_class import Grouping
 
 app = Flask(__name__)
 
+mbti_list = ["ENTP",
+            "ENTJ",
+            "ENFP",
+            "ENFJ",
+            "ESTP",
+            "ESTJ",
+            "ESFP",
+            "ESFJ",
+            "INTP",
+            "INTJ",
+            "INFP",
+            "INFJ",
+            "ISTP",
+            "ISTJ",
+            "ISFP",
+            "ISFJ"]
+
 @app.route('/')
 def route():
     return render_template(
-        'index.html'
+        'index.html',mbti_list = mbti_list
     )
 
 @app.route('/index',methods=['GET','POST'])
 def index():
     return render_template(
-        'index.html'
+        'index.html', mbti_list = mbti_list
     )
 
 
@@ -24,6 +41,7 @@ def index():
 @app.route('/result',methods=['GET','POST'])
 def result():
     if request.method == 'POST':
+        """
         INPUT = [ # 入力
         ["くしら","ISFP"],
         ["せいや","INTP"],
@@ -38,6 +56,19 @@ def result():
         ["D","INTP"],
         ["E","ISTJ"],
         ]
+        """
+        
+        input = request.form.getlist('get_input')
+        count = 0
+        input_list = []
+        INPUT=[]
+        for i in range(len(input)):
+            input_list.append(input[i])
+            count += 1
+            if (count%2==0):
+                INPUT.append(input_list)
+                input_list = []
+        print(INPUT)
         
         n = len(INPUT) # 人数
         g = int(request.form.get('group_num')) #グループ数
@@ -57,7 +88,7 @@ def result():
         
         return render_template('result.html', groups_name=groups_name[group_idx])
     else:
-        return render_template('index.html')
+        return render_template('index.html', mbti_list = mbti_list)
     
     
     
