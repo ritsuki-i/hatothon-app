@@ -6,22 +6,22 @@ from grouping_class import Grouping
 
 app = Flask(__name__)
 
-mbti_list = ["ENTP",
-            "ENTJ",
-            "ENFP",
-            "ENFJ",
-            "ESTP",
-            "ESTJ",
-            "ESFP",
-            "ESFJ",
-            "INTP",
-            "INTJ",
-            "INFP",
-            "INFJ",
-            "ISTP",
-            "ISTJ",
-            "ISFP",
-            "ISFJ"]
+mbti_list = ["ENTP(討論者)",
+            "ENTJ(指揮官)",
+            "ENFP(広報運動家)",
+            "ENFJ(主人公)",
+            "ESTP(起業家)",
+            "ESTJ(幹部)",
+            "ESFP(エンターテイナー)",
+            "ESFJ(領事官)",
+            "INTP(論理学者)",
+            "INTJ(建築家)",
+            "INFP(仲介者)",
+            "INFJ(提唱者)",
+            "ISTP(巨匠)",
+            "ISTJ(管理者)",
+            "ISFP(冒険家)",
+            "ISFJ(擁護者)"]
 
 @app.route('/')
 def route():
@@ -63,9 +63,11 @@ def result():
         input_list = []
         INPUT=[]
         for i in range(len(input)):
-            input_list.append(input[i])
+            if (count%2==0):
+                input_list.append(input[i])
             count += 1
             if (count%2==0):
+                input_list.append(input[i][0:4])
                 INPUT.append(input_list)
                 input_list = []
         print(INPUT)
