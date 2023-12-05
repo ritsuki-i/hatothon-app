@@ -8,6 +8,9 @@
 <body>
     <p>result画面</p>
     <p>{{ groups_name }}</p>
+    <p>スコア:{{ group_score }}%</p>
+    <p>人数:{{ numofpeople }}人</p>
+    <p>グループ数:{{ grouping_num }}人</p>
     <form action="/index" method="POST">
         <button type="submit" class="index" onclick=location.href="{{ url_for('index') }}">戻る</button>
     </form>
