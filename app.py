@@ -87,8 +87,9 @@ def result():
                     groups_name[i][j][k] = f"{INPUT[groups[i][j][k]][0]}({INPUT[groups[i][j][k]][1]})"
                     
         group_idx = totalScore_groups[0][2]
+        group_score = groupScores[group_idx][1] * 100
         
-        return render_template('result.html', groups_name=groups_name[group_idx])
+        return render_template('result.html', groups_name=groups_name[group_idx], group_score = group_score, grouping_num=g, numofpeople=n)
     else:
         return render_template('index.html', mbti_list = mbti_list)
     
