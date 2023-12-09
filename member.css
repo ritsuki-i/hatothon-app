@@ -1,0 +1,15 @@
+  /* スタイルは必要に応じて調整してください */
+  #container {
+    margin: 20px;
+  }
+
+  .image-container {
+    margin-top: 10px;
+  }
+
+  img {
+    margin-top: 5px;
+    width: 120px;
+    height: 120px;
+    border-radius:50%;
+  }
