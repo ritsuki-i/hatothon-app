@@ -249,9 +249,8 @@
       newOption = document.createElement("option");
     }
 
-    let optionText = document.createTextNode(count/2);
+    let optionText = document.createTextNode(count / 2);
     newOption.appendChild(optionText);
-    
 
     // 新しいオプションをドロップダウンに追加
     if (count >= 4 && count <= 12 && count % 2 == 0) {
