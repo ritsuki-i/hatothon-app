@@ -223,15 +223,18 @@
   const reduceButton = document.querySelector('#removeButton');
 
   reduceButton.addEventListener('click', () => {
-      if (count > 1) {
+      if (count > 4) {
         count = count - 1;
         removeMember()
       }
       number.innerHTML = count;
   });
   //最初に一回自動おし
-  const auto_button = document.getElementById('addButton');
-  auto_button.click();
+  for(i=0;i<4;i++){
+    const auto_button = document.getElementById('addButton');
+    auto_button.click();
+  }
+  
   //残り人数反映
   rest();
 
@@ -242,16 +245,16 @@
 
     // 新しいオプションを作成
     let newOption
-    if (count <= 12) {
+    if (count > 1 && count <= 12) {
       newOption = document.createElement("option");
     }
 
-    let optionText = document.createTextNode(count);
+    let optionText = document.createTextNode(count/2);
     newOption.appendChild(optionText);
     
 
     // 新しいオプションをドロップダウンに追加
-    if(count <= 12){
+    if (count >= 4 && count <= 12 && count % 2 == 0) {
       dropdown.appendChild(newOption);
     }
   }

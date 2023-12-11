@@ -13,10 +13,10 @@
   body {
     background-color: #323338;
     font-family: "M PLUS Rounded 1c";
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 5%;
     font-weight: 700;
+    width: 100vw;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .white_text {
@@ -45,6 +45,7 @@
     color: #f5e359;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 5%;
   }
 
   #container {
@@ -145,4 +146,23 @@
 
   html {
     text-align: center;
+  }
+
+  .fix_component_bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: #323338;
+  }
+  .fix_component_top {
+    position: fixed;
+    background-color: #323338;
+    width: 100vw;
+    margin-top: 0;
+    margin-left: 0;
+    text-align: center;
+  }
+  .add_members{
+    padding-top: 25vh;
+    padding-bottom: 20vh;
   }
