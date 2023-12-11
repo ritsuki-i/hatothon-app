@@ -1,8 +1,4 @@
   /* スタイルは必要に応じて調整してください */
-  #container {
-    margin: 20px;
-  }
-
   .image-container {
     margin-top: 10px;
   }
@@ -12,4 +8,141 @@
     width: 120px;
     height: 120px;
     border-radius:50%;
+  }
+
+  body {
+    background-color: #323338;
+    font-family: "M PLUS Rounded 1c";
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+    font-weight: 700;
+  }
+
+  .white_text {
+    color: white;
+    text-align: center;
+  }
+
+  #memberNumber {
+    color: #f09937;
+  }
+
+  #resible {
+    color: #f09937;
+    text-align: center;
+
+  }
+
+  #resible_rest {
+    color: #f09937;
+    text-align: center;
+  }
+
+  #title {
+    font-size: 200%;
+    font-weight: bold;
+    color: #f5e359;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #container {
+    margin-left: 0px;
+    margin-right: 0%;
+  }
+
+  #member_text {
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  #memberNumber {
+    font-size: 220%;
+    text-align: center
+  }
+
+  #G_addButton {             
+    margin:  auto; 
+    background-color: #f09937;
+    color: #f5e359;
+    border-radius: 15px;
+    font-size: 180%;
+    height: 50px;
+    width: 200px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #removeButton {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 220%;
+    background-color: #929292;
+    color: #ffffff;
+  }
+
+  #addButton {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 240%;
+    background-color: #929292;
+    color: #ffffff;
+  }
+
+  #GB_parent {
+    height: 90px;
+    text-align: center;
+    position: relative;
+  }
+
+  #num_Display {
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #G_numBlock {
+    margin-left: auto;
+    text-align: center;
+  }
+
+  #AR_Button {
+    display: flex;
+    position: absolute;
+    left:  0;                    
+    right:  0;   
+  }
+
+  #AR_Button_parent {
+    position: relative;
+    margin:  auto; 
+    margin-top: 20px;
+    width: 273px;
+    height: 50px;
+  }
+
+  #restNum_Display {
+    margin: auto
+  }
+
+  #dropdown {
+    width: 54px;
+    height: 35px;
+    margin-top: 8px;
+    font-size: larger;
+  }
+
+  #conrtainer {
+    text-align: center;
+  }
+
+  html {
+    text-align: center;
   }
