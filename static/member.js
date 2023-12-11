@@ -213,7 +213,7 @@
   let count = 0;
 
   plusButton.addEventListener('click', () => {
-      if(count < 12){
+      if(count <= 12){
         count ++; 
       }
       addOption();
