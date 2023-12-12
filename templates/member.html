@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>メンバー登録-性格ぴったりグループ生成アプリ</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='member.css') }}">
-</head>
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='member.css') }}">
 <body>
   <form action="/result" method="POST">
   <div id="container">
@@ -48,4 +43,4 @@
   </div>
   <script type="text/javascript" src="{{ url_for('static', filename='member.js') }}"></script>
 </body>
-</html>
+{% endblock %}
