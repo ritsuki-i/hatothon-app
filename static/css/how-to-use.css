@@ -15,20 +15,7 @@ body{
     display:block; /*PC版はこれなし*/
     margin:0 auto; /*PC版はこれなし*/
 }
-.header-icon1{
-    margin-top:5px;
-    width:45px;
-    margin-bottom: 5px;
-}
-.icon-holder{
-    margin:0 auto;
-}
-.header{
-    border-bottom:solid #fff 1px;
-}
-.header1{
-    display:flex;
-}
+
 .return-to-top{
     position: fixed;
     text-decoration: none;
