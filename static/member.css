@@ -114,6 +114,14 @@
     text-align: center;
   }
 
+  #group_num {
+    margin-top: 11%;
+    width: 65%;
+    height: 46%;
+    font-size: larger;
+    text-align: center;
+  }
+
   #AR_Button {
     display: flex;
     position: absolute;
