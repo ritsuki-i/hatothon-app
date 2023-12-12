@@ -6,22 +6,22 @@ from grouping_class import Grouping
 
 app = Flask(__name__)
 
-mbti_list = ["ENTP(討論者)",
-            "ENTJ(指揮官)",
-            "ENFP(広報運動家)",
-            "ENFJ(主人公)",
-            "ESTP(起業家)",
-            "ESTJ(幹部)",
-            "ESFP(エンターテイナー)",
-            "ESFJ(領事官)",
-            "INTP(論理学者)",
-            "INTJ(建築家)",
-            "INFP(仲介者)",
-            "INFJ(提唱者)",
-            "ISTP(巨匠)",
-            "ISTJ(管理者)",
-            "ISFP(冒険家)",
-            "ISFJ(擁護者)"]
+mbti_list = {"ENTP":"./static/images/debater.jpeg",
+            "ENTJ":"./static/images/commander.jpeg",
+            "ENFP":"./static/images/activist.jpeg",
+            "ENFJ":"./static/images/protagonist.jpeg",
+            "ESTP":"./static/images/entrepreneur.jpeg",
+            "ESTJ":"./static/images/executives.jpeg",
+            "ESFP":"./static/images/entertainer.jpeg",
+            "ESFJ":"./static/images/consul.jpeg",
+            "INTP":"./static/images/logist.jpeg",
+            "INTJ":"./static/images/architect.jpeg",
+            "INFP":"./static/images/intermediary.jpeg",
+            "INFJ":"./static/images/advocater.jpeg",
+            "ISTP":"./static/images/master.jpeg",
+            "ISTJ":"./static/images/administrator.jpeg",
+            "ISFP":"./static/images/adventurer.jpeg",
+            "ISFJ":"./static/images/defender.jpeg"}
 
 @app.route('/')
 def route():
