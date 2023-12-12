@@ -4,7 +4,7 @@ import copy
 from grouping_class import Grouping
 
 
-app = Flask(__name__, static_folder="./static/")
+app = Flask(__name__)
 
 mbti_list = ["ENTP(討論者)",
             "ENTJ(指揮官)",
@@ -26,23 +26,20 @@ mbti_list = ["ENTP(討論者)",
 @app.route('/')
 def route():
     return render_template(
-        'home.html',mbti_list = mbti_list
-    )
-
-@app.route('/how-to-use')
-def how():
-    return render_template(
-        'how-to-use.html',mbti_list = mbti_list
+        'index.html'
     )
 
 @app.route('/index',methods=['GET','POST'])
 def index():
     return render_template(
-        'index.html', mbti_list = mbti_list
+        'index.html'
     )
 
-
-    
+@app.route('/member',methods=['GET','POST'])
+def member():
+    return render_template(
+        'member.html'
+    )    
 
 @app.route('/result',methods=['GET','POST'])
 def result():
@@ -70,10 +67,10 @@ def result():
         INPUT=[]
         for i in range(len(input)):
             if (count%2==0):
-                input_list.append(input[i])
+                input_list.append(input[i][0:4])
             count += 1
             if (count%2==0):
-                input_list.append(input[i][0:4])
+                input_list.insert(0, input[i])
                 INPUT.append(input_list)
                 input_list = []
         print(INPUT)
@@ -93,10 +90,11 @@ def result():
                     groups_name[i][j][k] = f"{INPUT[groups[i][j][k]][0]}({INPUT[groups[i][j][k]][1]})"
                     
         group_idx = totalScore_groups[0][2]
-        
-        return render_template('result.html', groups_name=groups_name[group_idx])
+        group_score = groupScores[group_idx][1] * 100
+         
+        return render_template('result.html', groups_name=groups_name[group_idx], group_score = group_score, grouping_num=g, numofpeople=n)
     else:
-        return render_template('index.html', mbti_list = mbti_list)
+        return render_template('member.html')
     
     
     
