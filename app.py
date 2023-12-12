@@ -34,6 +34,12 @@ def index():
     return render_template(
         'index.html'
     )
+    
+@app.route('/how_to_use',methods=['GET','POST'])
+def how_to_use():
+    return render_template(
+        'how_to_use.html'
+    )
 
 @app.route('/member',methods=['GET','POST'])
 def member():
@@ -87,11 +93,11 @@ def result():
         for i in range(len(groups)):
             for j in range(len(groups[i])):
                 for k in range(len(groups[i][j])):
-                    groups_name[i][j][k] = f"{INPUT[groups[i][j][k]][0]}({INPUT[groups[i][j][k]][1]})"
+                    groups_name[i][j][k] = [f"{INPUT[groups[i][j][k]][0]}({INPUT[groups[i][j][k]][1]})", INPUT[groups[i][j][k]][1]]
                     
         group_idx = totalScore_groups[0][2]
         group_score = groupScores[group_idx][1] * 100
-         
+        print(groups_name)
         return render_template('result.html', groups_name=groups_name[group_idx], group_score = group_score, grouping_num=g, numofpeople=n, mbti_dic=mbti_dic)
     else:
         return render_template('member.html')
