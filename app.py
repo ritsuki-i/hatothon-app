@@ -39,10 +39,7 @@ def index():
 def member():
     return render_template(
         'member.html'
-    )
-
-
-    
+    )    
 
 @app.route('/result',methods=['GET','POST'])
 def result():
