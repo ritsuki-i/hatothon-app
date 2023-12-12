@@ -4,7 +4,7 @@ import copy
 from grouping_class import Grouping
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="./static/")
 
 mbti_list = ["ENTP(討論者)",
             "ENTJ(指揮官)",
@@ -26,7 +26,13 @@ mbti_list = ["ENTP(討論者)",
 @app.route('/')
 def route():
     return render_template(
-        'index.html',mbti_list = mbti_list
+        'home.html',mbti_list = mbti_list
+    )
+
+@app.route('/how-to-use')
+def how():
+    return render_template(
+        'how-to-use.html',mbti_list = mbti_list
     )
 
 @app.route('/index',methods=['GET','POST'])
