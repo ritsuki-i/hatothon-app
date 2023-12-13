@@ -247,6 +247,9 @@ for(i=0;i<4;i++){
 //残り人数反映
 rest();
 
+//ボタン状況記憶
+let flag3 = 0;
+
 //グループ数のプルダウン制御
 function addOption() {
 
@@ -287,15 +290,18 @@ function removeMember(){
 function rest(){
   let ato = document.getElementById("resible_rest");
   ato.innerHTML = "あと" + (12-count) + "人";
+  ato.style.color = "#f09937"
 }
 
 //メンバー追加時の残り人数表示の変更
 function rest2(){
   let ato = document.getElementById("resible_rest");
-  if((12-(count+1)) < 0){
+  if((12-(count+1)) <= 0){
     ato.innerHTML = "あと0人";
+    ato.style.color = "rgb(255, 60, 60)";
   }else{
     ato.innerHTML = "あと" + (12-(count+1)) + "人";
+    ato.style.color = "#f09937";
   }
 }
 
@@ -324,14 +330,30 @@ function areAllDropdownsSelected() {
 
   //どちらも全て入力されていたらボタンを有効化
   if(flag1 == 1 && flag2 == 1){
+    if (flag3 == 0){
+      const submitButton_on = document.getElementById("G_addButton");
+      submitButton_on.id = "ButtonValid";
+      flag3 = 1;
+    }
     return false;
   }else{
+    if (flag3 == 1){
+      const submitButton_off = document.getElementById("ButtonValid");
+      submitButton_off.id = "G_addButton";
+      flag3 = 0;
+    }
     return true;
   }
 }
 
 //ボタンを有効化
 function checkDropdowns() {
-  const submitButton = document.getElementById("G_addButton");
-  submitButton.disabled = areAllDropdownsSelected();
+  if(flag3 == 0){
+    const submitButton0 = document.getElementById("G_addButton");
+    submitButton0.disabled = areAllDropdownsSelected();
+  }else{
+    const submitButton1 = document.getElementById("ButtonValid");
+    submitButton1.disabled = areAllDropdownsSelected();
+  }
 }
+
