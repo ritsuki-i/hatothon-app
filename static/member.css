@@ -58,7 +58,6 @@
   }
 
   #member_text {
-    margin-top: 3%;
     text-align: center;
   }
 
@@ -87,7 +86,7 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    font-size: 220%;
+    font-size: 240%;
     background-color: rgb(170, 30, 30);
     color: #ffffff;
   }
@@ -180,8 +179,7 @@
     text-align: center;
   }
   .add_members{
-
-    padding-top: 31.7vh;
+    padding-top: 32.5vh;
     padding-bottom: 19vh;
   }
 
@@ -206,4 +204,13 @@
     bottom: 0;
     left: 0;
     right: 0;
+  }
+
+  #ButtonDesabled {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 240%;
+    background-color: #323338;
+    color: #ffffff;
   }

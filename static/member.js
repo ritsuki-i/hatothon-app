@@ -225,6 +225,17 @@ plusButton.addEventListener('click', () => {
     }
     addOption();
     number.innerHTML = count;
+    if(count == 12){
+      plusButton.disabled = true;
+      plusButton.style.background = "#323338";
+    }
+    if(count != 4){
+      reduceButton.disabled = false;
+      reduceButton.style.background = "rgb(170, 30, 30)";
+    }else{
+      reduceButton.disabled = true;
+      reduceButton.style.background = "#323338";
+    }
 });
 
 //人数を減らす
@@ -236,6 +247,14 @@ reduceButton.addEventListener('click', () => {
       removeMember()
     }
     number.innerHTML = count;
+    if(count != 12){
+      plusButton.disabled = false;
+      plusButton.style.background = "rgb(30, 30, 170)";
+    }
+    if(count == 4){
+      reduceButton.disabled = true;
+      reduceButton.style.background = "#323338";
+    }
 });
 
 //最初に4回自動おし
