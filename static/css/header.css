@@ -1,8 +1,9 @@
 .header-icon1 {
     margin-top: 5px;
-    width: 5vh;
-    height: 5vh;
+    width: 6vh;
+    height: 7vh;
     margin-bottom: 5px;
+    border-radius: 0%;
 }
 
 .icon-holder {
