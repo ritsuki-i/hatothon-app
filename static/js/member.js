@@ -10,55 +10,55 @@ function changeImage(selectElement) {
   // 選択に基づいて画像のソースを設定
   switch (selectedValue) {
     case "option0":
-      imageSrc = "./static/images/default.jpeg";
+      imageSrc = "/static/images/default.jpeg";
       break;
     case "INTJ(建築家)":
-      imageSrc = "./static/images/architect.jpeg";
+      imageSrc = "/static/images/architect.jpeg";
       break;
     case "INTP(論理学者)":
-      imageSrc = "./static/images/logist.jpeg";
+      imageSrc = "/static/images/logist.jpeg";
       break;
     case "ENTJ(指揮官)":
-      imageSrc = "./static/images/commander.jpeg";
+      imageSrc = "/static/images/commander.jpeg";
       break;
     case "ENTP(討論者)":
-      imageSrc = "./static/images/debater.jpeg";
+      imageSrc = "/static/images/debater.jpeg";
       break;
     case "INFJ(提唱者)":
-      imageSrc = "./static/images/advocater.jpeg";
+      imageSrc = "/static/images/advocater.jpeg";
       break;
     case "INFP(仲介者)":
-      imageSrc = "./static/images/intermediary.jpeg";
+      imageSrc = "/static/images/intermediary.jpeg";
       break;
     case "ENFJ(主人公)":
-      imageSrc = "./static/images/protagonist.jpeg";
+      imageSrc = "/static/images/protagonist.jpeg";
       break;
     case "ENFP(運動家)":
-      imageSrc = "./static/images/activist.jpeg";
+      imageSrc = "/static/images/activist.jpeg";
       break;
     case "ISTJ(管理者)":
-      imageSrc = "./static/images/administrator.jpeg";
+      imageSrc = "/static/images/administrator.jpeg";
       break;
     case "ISFJ(擁護者)":
-      imageSrc = "./static/images/defender.jpeg";
+      imageSrc = "/static/images/defender.jpeg";
       break;
     case "ESTJ(幹部)":
-      imageSrc = "./static/images/executives.jpeg";
+      imageSrc = "/static/images/executives.jpeg";
       break;
     case "ESFJ(領事)":
-      imageSrc = "./static/images/consul.jpeg";
+      imageSrc = "/static/images/consul.jpeg";
       break;
     case "ISTP(巨匠)":
-      imageSrc = "./static/images/master.jpeg";
+      imageSrc = "/static/images/master.jpeg";
       break;
     case "ISFP(冒険家)":
-      imageSrc = "./static/images/adventurer.jpeg";
+      imageSrc = "/static/images/adventurer.jpeg";
       break;
     case "ESTP(起業家)":
-      imageSrc = "./static/images/entrepreneur.jpeg";
+      imageSrc = "/static/images/entrepreneur.jpeg";
       break;
     case "ESFP(エンターテイナー)":
-      imageSrc = "./static/images/entertainer.jpeg";
+      imageSrc = "/static/images/entertainer.jpeg";
       break;
   }
 
