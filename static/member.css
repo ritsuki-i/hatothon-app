@@ -58,6 +58,7 @@
   }
 
   #member_text {
+    margin-top: 3%;
     text-align: center;
   }
 
@@ -179,6 +180,7 @@
     text-align: center;
   }
   .add_members{
+
     padding-top: 31.7vh;
     padding-bottom: 19vh;
   }

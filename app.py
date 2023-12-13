@@ -79,7 +79,6 @@ def result():
                 input_list.insert(0, input[i])
                 INPUT.append(input_list)
                 input_list = []
-        print(INPUT)
         
         n = len(INPUT) # 人数
         g = int(request.form.get('group_num')) #グループ数
@@ -97,7 +96,6 @@ def result():
                     
         group_idx = totalScore_groups[0][2]
         group_score = groupScores[group_idx][1] * 100
-        print(groups_name)
         return render_template('result.html', groups_name=groups_name[group_idx], group_score = group_score, grouping_num=g, numofpeople=n, mbti_dic=mbti_dic)
     else:
         return render_template('member.html')

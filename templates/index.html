@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="./static/css/home.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="./static/css/home.css"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
 </head>
@@ -18,4 +14,4 @@
         <div class="option2"><a href="{{ url_for('how_to_use') }}"><h2>使い方</h2></a></div>
     </div>
 </body>
-</html>
+{% endblock %}

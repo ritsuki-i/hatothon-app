@@ -2,12 +2,15 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='member.css') }}">
 <body>
+
   <form action="/result" method="POST">
   <div id="container">
     <div class="fix_component_top">
-      <div id="header">
-        <img src="static/images/logo.png" alt="ロゴ画像" id="LogoImg">
-        <hr>
+      <div class="header">
+        <div class="header1">
+          <div class="icon-holder"><a href="{{ url_for('index') }}"><img src="./static/images/logo.png" alt="ロゴ画像"
+                class="header-icon1" id="LogoImg"></a></div>
+        </div>
       </div>
       <div id="title">メンバー登録</div>
       <div id="num_Display">
