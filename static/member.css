@@ -159,11 +159,6 @@
     text-align: center;
   }
 
-  #LogoImg {
-    width: 6vh;
-    height: 7vh;
-  }
-
   .fix_component_bottom{
     position: fixed;
     bottom: 0;
@@ -180,7 +175,7 @@
   }
   .add_members{
     padding-top: 32.5vh;
-    padding-bottom: 19vh;
+    padding-bottom: 21.2vh;
   }
 
   hr {
@@ -206,6 +201,7 @@
     right: 0;
   }
 
+
   #ButtonDesabled {
     height: 50px;
     width: 50px;
@@ -214,3 +210,8 @@
     background-color: #323338;
     color: #ffffff;
   }
+
+  #error_message{
+    color: rgb(255, 0, 0);
+  }
+

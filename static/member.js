@@ -374,5 +374,7 @@ function checkDropdowns() {
     const submitButton1 = document.getElementById("ButtonValid");
     submitButton1.disabled = areAllDropdownsSelected();
   }
+  const error_message = document.getElementById("error_message");
+  error_message.hidden = !(areAllDropdownsSelected());
 }
 
