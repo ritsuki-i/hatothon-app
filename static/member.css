@@ -201,16 +201,6 @@
     right: 0;
   }
 
-
-  #ButtonDesabled {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    font-size: 240%;
-    background-color: #323338;
-    color: #ffffff;
-  }
-
   #error_message{
     color: rgb(255, 0, 0);
   }

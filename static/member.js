@@ -209,6 +209,9 @@ function addMember() {
 
   //残り人数反映
   rest2();
+
+  //ボタン有効化チェック
+  checkDropdowns();
 }
 
 //人数カウント
@@ -302,6 +305,9 @@ function removeMember(){
 
   //残り人数反映
   rest();
+
+  //ボタン有効化チェック
+  checkDropdowns();
 }
 
 //残り人数表示
