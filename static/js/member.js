@@ -73,9 +73,11 @@ function changeImage(selectElement) {
 
 }
 
+//ボタン状況記憶
+let flag3 = 0;
+
 // メンバーを追加・削除する関数
 function addMember() {
-
   // 新しい画像選択の要素を作成
   let pullDownContainer = document.createElement("div");
   pullDownContainer.className = "image-container";
@@ -83,9 +85,9 @@ function addMember() {
   // プルダウンリストの要素を作成
   let pullDown = document.createElement("select");
   pullDown.name = "get_input";
-  pullDown.className = "dropdown"
+  pullDown.className = "dropdown";
   pullDown.required = true;
-  pullDown.addEventListener("change", function() {
+  pullDown.addEventListener("change", function () {
     changeImage(pullDown);
     checkDropdowns();
   });
@@ -197,18 +199,21 @@ function addMember() {
   newTextbox.className = "name_textbox";
   newTextbox.placeholder = "名前を入力";
   newTextbox.required = true;
-  newTextbox.addEventListener("input", function() {
+  newTextbox.addEventListener("input", function () {
     checkDropdowns();
   });
   pullDownContainer.appendChild(newTextbox);
 
   // コンテナに新しいプルダウンを追加
-  if(count < 12){
+  if (count < 12) {
     container.appendChild(pullDownContainer);
   }
 
   //残り人数反映
   rest2();
+
+  //ボタン有効化チェック
+  checkDropdowns();
 }
 
 //人数カウント
@@ -266,8 +271,7 @@ for(i=0;i<4;i++){
 //残り人数反映
 rest();
 
-//ボタン状況記憶
-let flag3 = 0;
+
 
 //グループ数のプルダウン制御
 function addOption() {
@@ -291,17 +295,20 @@ function addOption() {
 
 //メンバー削除
 function removeMember(){
-  const removeM = document.querySelector('.image-container:last-child');
+  const removeM = document.querySelector(".image-container:last-child");
   removeM.remove();
 
   //グループ数オプション削除
-  const removeG = document.querySelector('option:last-child');
-  if(count >= 3 && count < 12 && count % 2 == 1){
+  const removeG = document.querySelector("option:last-child");
+  if (count >= 3 && count < 12 && count % 2 == 1) {
     removeG.remove();
   }
 
   //残り人数反映
   rest();
+
+  //ボタン有効化チェック
+  checkDropdowns();
 }
 
 //残り人数表示
