@@ -1,27 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/result.css">
     <title>Document</title>
 </head>
 <body>
-    <p>result画面</p>
-    <p>スコア:{{ group_score }}%</p>
-    <p>人数:{{ numofpeople }}人</p>
-    <p>グループ数:{{ grouping_num }}人</p>
-    <ul>
-        {% for group in groups_name %}
-        <li>
-            {% for name in group %}
-                {{ name }}
-            {% endfor %}
-        </li>
-        {% endfor %}
-    </ul>
+    <header>
 
-    <form action="/index" method="POST">
-        <button type="submit" class="index" onclick=location.href="{{ url_for('index') }}">戻る</button>
-    </form>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="result">
+                <p>生成結果</p>
+            </div>
+            <div class="wrapper">
+                <div class="members">
+                    <p>人数</p>
+                    <p>{{ numofpeople }}</p>
+                </div>
+                <div class="groups">
+                    <p>グループ数</p>
+                    <p>{{ grouping_num }}</p>
+                </div>
+                <div class="score">
+                    <p>マッチ度(%)</p>
+                    <!-- <p>{{ group_score }}</p> -->
+                    <p>80</p>
+                </div>
+            </div>
+
+            <div class="number">
+                {% for group_name in groups_name %}
+                <div class="group-wrapper">
+                    <input type="text" name="" id="">
+                    <div class="name-wrapper">
+                        {% for name in group_name %}
+                            <p>{{ name }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <form action="/index" method="POST">
+                <button type="submit" class="index" onclick=location.href="{{ url_for('index') }}">戻る</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
