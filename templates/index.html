@@ -1,63 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="./static/css/home.css"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <p>ホーム画面</p>
-    <form action="/result" method="POST">
-        <p>グループの分割数:<select id="group_num" name="group_num">
-            <option value="" disabled selected>入力してください</option>
-            <option value=1>1</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5</option>
-            <option value=6>6</option>
-            <option value=7>7</option>
-            <option value=8>8</option>
-            <option value=9>9</option>
-            <option value=10>10</option>
-            <option value=11>11</option>
-            <option value=12>12</option>
-        </select></p>
 
-        <div class="get_input">
-            <p>name: <input type="text" name="get_input" required>
-                <select id="mbti" name="get_input">
-                    <option value="" disabled selected>あなたのMBTIを選択してください</option>
-                    {% for mbti in mbti_list %}
-                        <option value="{{ mbti }}">{{ mbti }}</option>
-                    {% endfor %}
-                </select></p>
-            <p>name: <input type="text" name="get_input"  required>
-                <select id="mbti" name="get_input">
-                    <option value="" disabled selected>あなたのMBTIを選択してください</option>
-                    {% for mbti in mbti_list %}
-                        <option value="{{ mbti }}">{{ mbti }}</option>
-                    {% endfor %}
-                </select>
-            </p>
-            <p>name: <input type="text" name="get_input"  required>
-                <select id="mbti" name="get_input">
-                    <option value="" disabled selected>あなたのMBTIを選択してください</option>
-                    {% for mbti in mbti_list %}
-                        <option value="{{ mbti }}">{{ mbti }}</option>
-                    {% endfor %}
-                </select>
-            </p>
-            <p>name: <input type="text" name="get_input">
-                <select id="mbti" name="get_input">
-                    <option value="" disabled selected>あなたのMBTIを選択してください</option>
-                    {% for mbti in mbti_list %}
-                        <option value={{ mbti }}>{{ mbti }}</option>
-                    {% endfor %}
-                </select>
-            </p>
-        </div>
-        <button type="submit" class="submit" onclick=location.href="{{ url_for('result') }}">結果</button>
-    </form>
+<body>
+    <div class="main">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" class="main_logo">
+        <h1>性格ぴったり<br>グループ生成アプリ</h1>
+        <div class="option1"><a href="{{ url_for('member') }}"><h2>グループを作る</h2></a></div>
+        <div class="option2"><a href="{{ url_for('how_to_use') }}"><h2>使い方</h2></a></div>
+    </div>
 </body>
-</html>
+{% endblock %}

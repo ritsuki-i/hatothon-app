@@ -6,37 +6,46 @@ from grouping_class import Grouping
 
 app = Flask(__name__)
 
-mbti_list = ["ENTP(討論者)",
-            "ENTJ(指揮官)",
-            "ENFP(広報運動家)",
-            "ENFJ(主人公)",
-            "ESTP(起業家)",
-            "ESTJ(幹部)",
-            "ESFP(エンターテイナー)",
-            "ESFJ(領事官)",
-            "INTP(論理学者)",
-            "INTJ(建築家)",
-            "INFP(仲介者)",
-            "INFJ(提唱者)",
-            "ISTP(巨匠)",
-            "ISTJ(管理者)",
-            "ISFP(冒険家)",
-            "ISFJ(擁護者)"]
+mbti_dic = {"ENTP":"./static/images/debater.jpeg",
+            "ENTJ":"./static/images/commander.jpeg",
+            "ENFP":"./static/images/activist.jpeg",
+            "ENFJ":"./static/images/protagonist.jpeg",
+            "ESTP":"./static/images/entrepreneur.jpeg",
+            "ESTJ":"./static/images/executives.jpeg",
+            "ESFP":"./static/images/entertainer.jpeg",
+            "ESFJ":"./static/images/consul.jpeg",
+            "INTP":"./static/images/logist.jpeg",
+            "INTJ":"./static/images/architect.jpeg",
+            "INFP":"./static/images/intermediary.jpeg",
+            "INFJ":"./static/images/advocater.jpeg",
+            "ISTP":"./static/images/master.jpeg",
+            "ISTJ":"./static/images/administrator.jpeg",
+            "ISFP":"./static/images/adventurer.jpeg",
+            "ISFJ":"./static/images/defender.jpeg"}
 
 @app.route('/')
 def route():
     return render_template(
-        'index.html',mbti_list = mbti_list
+        'index.html'
     )
 
 @app.route('/index',methods=['GET','POST'])
 def index():
     return render_template(
-        'index.html', mbti_list = mbti_list
+        'index.html'
+    )
+    
+@app.route('/how_to_use',methods=['GET','POST'])
+def how_to_use():
+    return render_template(
+        'how_to_use.html'
     )
 
-
-    
+@app.route('/member',methods=['GET','POST'])
+def member():
+    return render_template(
+        'member.html'
+    )    
 
 @app.route('/result',methods=['GET','POST'])
 def result():
@@ -64,13 +73,12 @@ def result():
         INPUT=[]
         for i in range(len(input)):
             if (count%2==0):
-                input_list.append(input[i])
+                input_list.append(input[i][0:4])
             count += 1
             if (count%2==0):
-                input_list.append(input[i][0:4])
+                input_list.insert(0, input[i])
                 INPUT.append(input_list)
                 input_list = []
-        print(INPUT)
         
         n = len(INPUT) # 人数
         g = int(request.form.get('group_num')) #グループ数
@@ -84,14 +92,13 @@ def result():
         for i in range(len(groups)):
             for j in range(len(groups[i])):
                 for k in range(len(groups[i][j])):
-                    groups_name[i][j][k] = f"{INPUT[groups[i][j][k]][0]}({INPUT[groups[i][j][k]][1]})"
+                    groups_name[i][j][k] = [f"{INPUT[groups[i][j][k]][0]}({INPUT[groups[i][j][k]][1]})", INPUT[groups[i][j][k]][1]]
                     
         group_idx = totalScore_groups[0][2]
         group_score = groupScores[group_idx][1] * 100
-        
-        return render_template('result.html', groups_name=groups_name[group_idx], group_score = group_score, grouping_num=g, numofpeople=n)
+        return render_template('result.html', groups_name=groups_name[group_idx], group_score = group_score, grouping_num=g, numofpeople=n, mbti_dic=mbti_dic)
     else:
-        return render_template('index.html', mbti_list = mbti_list)
+        return render_template('member.html')
     
     
     
