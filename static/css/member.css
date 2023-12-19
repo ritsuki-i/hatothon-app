@@ -26,6 +26,7 @@
   .white_text {
     color: white;
     text-align: center;
+    font-size: 80%;
   }
 
   #memberNumber {
@@ -50,11 +51,6 @@
     text-align: center;
     margin-bottom: 1vh;
     margin-top: 0.05vh;
-  }
-
-  #container {
-    margin-left: 0px;
-    margin-right: 0%;
   }
 
   #member_text {
@@ -87,7 +83,7 @@
     width: 50px;
     border-radius: 50%;
     font-size: 240%;
-    background-color: rgb(170, 30, 30);
+    background-color: rgb(255, 113, 113);
     color: #ffffff;
   }
 
@@ -96,7 +92,7 @@
     width: 50px;
     border-radius: 50%;
     font-size: 240%;
-    background-color: rgb(30, 30, 170);
+    background-color: rgb(113, 190, 255);
     color: #ffffff;
   }
 
@@ -118,10 +114,11 @@
   }
 
   #group_num {
-    margin-top: 11%;
-    width: 65%;
+    margin-top: 14%;
+    width: 70%;
     height: 46%;
-    font-size: larger;
+    border-radius: 8px;
+    font-size: 160%;
     text-align: center;
   }
 
@@ -174,7 +171,7 @@
     text-align: center;
   }
   .add_members{
-    padding-top: 32.5vh;
+    padding-top: 31vh;
     padding-bottom: 21.2vh;
   }
 
@@ -204,4 +201,3 @@
   #error_message{
     color: rgb(255, 0, 0);
   }
-
