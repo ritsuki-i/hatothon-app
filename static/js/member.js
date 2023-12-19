@@ -236,7 +236,7 @@ plusButton.addEventListener('click', () => {
     }
     if(count != 4){
       reduceButton.disabled = false;
-      reduceButton.style.background = "rgb(170, 30, 30)";
+      reduceButton.style.background = "rgb(255, 133, 133)";
     }else{
       reduceButton.disabled = true;
       reduceButton.style.background = "#323338";
@@ -254,7 +254,7 @@ reduceButton.addEventListener('click', () => {
     number.innerHTML = count;
     if(count != 12){
       plusButton.disabled = false;
-      plusButton.style.background = "rgb(30, 30, 170)";
+      plusButton.style.background = "rgb(133, 210, 255)";
     }
     if(count == 4){
       reduceButton.disabled = true;
