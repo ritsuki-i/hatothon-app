@@ -1,41 +1,33 @@
 .container
 {
-    border: 1px solid black;
     width:80%;
     max-width: 800px;
-    margin:0 auto;
 }
-.result
-{
-    border: 1px solid black;
-    text-align: center;
-    font-size :60px;
-    font-weight: 600;
-    color:yellow;
-}
+
 .wrapper
 {
-    border: 1px solid black;
     display: flex;
-    width:85%;
-    margin:5px auto;
-    justify-content: space-between ;
+    width:100%;
+    margin: 0 auto;
 }
+
 .wrapper div{
     width: 30%;
     height: 125px;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin: 0 auto;
 }
+
 .wrapper div p{
     text-align: center;
 }
+
 .wrapper div p:nth-of-type(1)
 {
     margin: 0;
 }
+
 .wrapper div p:nth-of-type(2)
 {
     margin: 0;
@@ -43,21 +35,137 @@
     font-weight: 600;
     font-size: 45px;
 }
-.number p
+
+#member_name
 {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: white;
+    font-size: 80%;
+    margin-top: auto;
+    margin-right: 10%;
 }
 
 .group-wrapper
 {
     display: flex;
-    justify-content: space-between;
+    padding-left: 2%;
+    background-color: #f09937;
 }
 
 .name-wrapper{
     width: 50%;
     display: flex;
+    margin-left: 3%;
 }
+
+body {
+    background-color: #323338;
+    font-family: "M PLUS Rounded 1c";
+    font-weight: 700;
+    width: 100vw;
+    margin: 0;
+  }
+
+input {
+    width: 20%;
+}
+
+.number {
+    text-align: center;
+}
+
+.result {
+    font-size: 200%;
+    font-weight: bold;
+    color: #f5e359;
+    text-align: center;
+    margin-bottom: 1vh;
+    margin-top: 0.05vh;
+  }
+
+.container {
+    margin: 0 auto;
+}
+
+.white_text {
+    color: white;
+    text-align: center;
+    font-size: 80%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.members {
+    text-align: center;
+}
+
+.groups {
+    text-align: center;
+    margin-left: auto;
+}
+
+.score {
+    text-align: center;
+    margin-left: auto;
+}
+
+#result_wrap {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.d_result {
+    color: #f09937;
+    font-size: 220%;
+}
+
+#member_text {
+    margin-left: 33%;
+}
+
+#group_text {
+    margin-left: 6%;
+}
+
+#MG_text {
+    display: flex;
+}
+
+hr {
+    margin: 0.05%;
+    height: 0.3px;
+    background-color: #929292;
+    border: none;
+  }
+
+input {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 3%;
+    padding-right: 0%;
+    border-radius: 10px;
+}
+
+#fix_component {
+    position: fixed;
+    background-color: #323338;
+    width: 100vw;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+button {
+    margin: 10%;
+}
+
+.number {
+    overflow: auto;
+}
+
+.group_result {
+    padding-top: 31.7vh;
+}
+

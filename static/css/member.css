@@ -31,6 +31,8 @@
 
   #memberNumber {
     color: #f09937;
+    font-size: 220%;
+    text-align: center
   }
 
   #resible {
@@ -48,18 +50,12 @@
     font-size: 200%;
     font-weight: bold;
     color: #f5e359;
-    text-align: center;
     margin-bottom: 1vh;
     margin-top: 0.05vh;
   }
 
   #member_text {
     text-align: center;
-  }
-
-  #memberNumber {
-    font-size: 220%;
-    text-align: center
   }
 
   #G_addButton {             
