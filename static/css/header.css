@@ -1,0 +1,19 @@
+.header-icon1 {
+    margin-top: 5px;
+    width: 6vh;
+    height: 7vh;
+    margin-bottom: 5px;
+    border-radius: 0%;
+}
+
+.icon-holder {
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: solid #fff 1px;
+}
+
+.header1 {
+    display: flex;
+}
