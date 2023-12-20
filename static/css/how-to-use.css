@@ -1,35 +1,67 @@
-body{
+body {
+    width: 100%;
     position: absolute;
     background-color: #202020;
-    color:#fff;
+    color: #fff;
     font-family: 'DotGothic16', sans-serif;
     font-family: 'Kiwi Maru', serif;
 }
-.main{
-    /* padding-left:30%;   PC版はこれあり */
-    /* margin-right:30%;   PC版はこれあり */
-}
-.main img{
-    width:50%;
-    border:solid 2px;
-    display:block; /*PC版はこれなし*/
-    margin:0 auto; /*PC版はこれなし*/
+
+.main {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.return-to-top{
+.main img {
+    width: 50%;
+    border: solid 2px;
+    display: block;
+    /*PC版はこれなし*/
+    margin: 0 auto;
+    /*PC版はこれなし*/
+}
+
+.header-icon1 {
+    margin-top: 5px;
+    width: 45px;
+    margin-bottom: 5px;
+}
+
+.icon-holder {
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: solid #fff 1px;
+}
+
+.header1 {
+    display: flex;
+}
+
+.return-to-top {
     position: fixed;
     text-decoration: none;
-    color:#fff;
+    color: #fff;
     transition: 0.3s;
     bottom: 10px;
-    left: 270px;  /*PC版は40px*/
+    right: 5vw;
 }
-.return-to-top :hover{
+
+.return-to-top :hover {
     opacity: 0.8;
 }
 
-.main h2{
+.main h2 {
     background-color: black;
-    border-left:solid 5px;
-    padding-left:5px;
+    border-left: solid 5px;
+    padding-left: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
