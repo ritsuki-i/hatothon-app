@@ -1,47 +1,71 @@
-body{
+body {
     background-color: #202020;
     font-family: 'DotGothic16', sans-serif;
     font-family: 'Kiwi Maru', serif;
-    overflow: hidden;
-    margin-top:50px;
 }
-.main{
-    color:#ffff19;
+
+.main {
+    width: 80%;
+    color: #ffff19;
     text-align: center;
-    margin:50% auto;
+    margin: 0 auto;
+    margin-top: 100px;
 }
-@media screen and (min-width: 472px) {
-    .main {
-            color: #ffff19;
-            text-align: center;
-            margin: 0 auto;
-        }
+
+.main h1 {
+    text-align: center;
 }
-.main h2{
-    color:#ffff19;
+
+.main h2 {
+    color: #ffff19;
     transition: 0.3s;
 }
-.main h2:hover{
+
+.main h2:hover {
     opacity: 0.8;
 }
-.main a{
+
+.main a {
     text-decoration: none;
 }
-.main img{
-    width:20%;
+
+.main img {
+    width: 150px;
+    height: 150px;
 }
-.main h2{
+
+.main h2 {
     border-radius: 12px;
     background-color: #f29d35;
     text-align: center;
-    padding-bottom:5px;
+    padding-bottom: 5px;
 }
-.option1{
-    width:50%;
-    padding-left:25%;
-    margin-top: 15vh;
+
+.option1 {
+    width: 200px;
+    margin: 10% auto;
 }
-.option2{
-    width:50%;
-    padding-left:25%;
+
+.option2 {
+    width: 200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        margin-top: 50%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    div {
+        width: 150px;
+    }
+
+    div a h2 {
+        font-size: 18px;
+    }
+
 }
