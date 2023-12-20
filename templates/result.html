@@ -32,9 +32,14 @@
     </div>
     <div class="group_result">
         <div class="number">
-            {% for group_name in groups_name %}
+            {% for group_name,group_mbti in groups_name %}
             <div class="group-wrapper">
-                <input type="text" name="" id="">
+                <input type="text" name="" id="" placeholder="チーム名">
+                <div class="mbti-wrapper">
+                    {% for mbti in group_mbti %}
+                    <div id="member_mbti"><img class="mbti_img" src="{{ mbti_dic[mbti] }}" alt=""></div>
+                    {% endfor %}
+                </div>
                 <div class="name-wrapper">
                     {% for name in group_name %}
                         <div id="member_name">{{ name }}</div>
