@@ -60,6 +60,11 @@
     margin-left: 3%;
 }
 
+img.mbti_img{
+    width: 8vh;
+    border-radius: 50%;
+}
+
 body {
     background-color: #323338;
     font-family: "M PLUS Rounded 1c";
