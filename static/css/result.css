@@ -7,16 +7,18 @@
 .wrapper
 {
     display: flex;
+    flex-wrap: wrap;
     width:100%;
     margin: 0 auto;
+    margin-bottom: 3%;
 }
 
 .wrapper div{
-    width: 30%;
-    height: 125px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+    /* width: 30%; */
+    /* height: 125px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin: 0 auto; */
 }
 
 .wrapper div p{
@@ -38,19 +40,18 @@
 
 #member_name
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: space-between; */
     color: white;
     font-size: 80%;
     margin-top: auto;
-    margin-right: 10%;
+    /* margin-right: 10%; */
 }
 
 .group-wrapper
 {
     display: flex;
-    padding-left: 2%;
     background-color: #f09937;
 }
 
@@ -63,6 +64,7 @@
 img.mbti_img{
     width: 8vh;
     border-radius: 50%;
+    position: relative;
 }
 
 .mbti-wrapper {
@@ -151,11 +153,13 @@ hr {
   }
 
 input {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    padding: 3%;
-    padding-right: 0%;
-    border-radius: 10px;
+    margin-top: 18%;
+    margin-bottom: 18%;
+    width: 30%;
+    border-radius: 1vh;
+    margin-left: 2%;
+    padding-right: 1px;
+    padding-left: 8px;
 }
 
 #fix_component {
@@ -178,3 +182,30 @@ button {
     padding-top: 31.7vh;
 }
 
+.member-wrapper {
+    /* text-align: center; */
+    margin-left: 4%;
+    margin-right: 0;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+/* .wrapper {
+    display: flex;
+} */
+
+#member_name {
+    position: absolute;
+    top: 92%;
+    left: 0;
+    right: 0;
+    margin-bottom: 3%;
+}
+
+#member_mbti {
+    position: relative;
+}
+
+.group_name{
+    height: 20%;
+}

@@ -96,17 +96,12 @@ def result():
                     
         group_idx = totalScore_groups[0][2]
         group_score = int(groupScores[group_idx][1] * 100)
+        
         print(groups_name[group_idx])
-        #groups_name[group_idx] = [[['a', 'ISFP'],['as', 'ISFP']], [['立騎', 'ISFP'],['sa', 'ISFP']]]
+
         return render_template('result.html', groups_name=groups_name[group_idx], group_score = group_score, grouping_num=g, numofpeople=n, mbti_dic=mbti_dic)
     else:
         return render_template('member.html')
-    
-    
-    
-
-
-    
 
 if __name__ == "__main__":
     app.run(debug=True)
