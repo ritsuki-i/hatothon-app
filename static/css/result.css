@@ -65,6 +65,10 @@ img.mbti_img{
     border-radius: 50%;
 }
 
+.mbti-wrapper {
+    display: flex;
+}
+
 body {
     background-color: #323338;
     font-family: "M PLUS Rounded 1c";
