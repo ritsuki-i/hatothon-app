@@ -92,21 +92,16 @@ def result():
         for i in range(len(groups)):
             for j in range(len(groups[i])):
                 for k in range(len(groups[i][j])):
-                    groups_name[i][j][k] = INPUT[groups[i][j][k]][0]
+                    groups_name[i][j][k] = INPUT[groups[i][j][k]]
                     
         group_idx = totalScore_groups[0][2]
         group_score = int(groupScores[group_idx][1] * 100)
-        groups_name[group_idx] = [[['a', 'as'],['ISFP', 'ISFP']], [['立騎', 'aa'],['ISFP', 'ISFP']]]
-        groups_name[group_idx] = [[['a', 'ISFP'],['as', 'ISFP'],['as', 'ISFP'],['as', 'ISFP']], [['立騎', 'ISFP'],['sa', 'ISFP'],['as', 'ISFP'],['as', 'ISFP']]]
+        
+        print(groups_name[group_idx])
+
         return render_template('result.html', groups_name=groups_name[group_idx], group_score = group_score, grouping_num=g, numofpeople=n, mbti_dic=mbti_dic)
     else:
         return render_template('member.html')
-    
-    
-    
-
-
-    
 
 if __name__ == "__main__":
     app.run(debug=True)

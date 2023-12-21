@@ -34,7 +34,7 @@
         <div class="number">
             {% for group_name in groups_name %}
             <div class="group-wrapper">
-                <input type="text" name="" id="" placeholder="グループ名">
+                <input type="text" class="group_name" placeholder="グループ名">
                 <div class="wrapper">
                         {% for name in group_name %}
                             <div class="member-wrapper">
@@ -46,6 +46,7 @@
                         {% endfor %}
                 </div>
             </div>
+            <hr>
             {% endfor %}
         </div>
         <form action="/index" method="POST">
