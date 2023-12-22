@@ -153,10 +153,10 @@ hr {
   }
 
 input {
-    margin-top: 18%;
-    margin-bottom: 18%;
-    width: 30%;
-    border-radius: 1vh;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 87px;
+    border-radius: 6px;
     margin-left: 2%;
     padding-right: 1px;
     padding-left: 8px;
@@ -168,6 +168,7 @@ input {
     width: 100vw;
     margin-top: 0;
     margin-left: 0;
+    z-index: 10000;
 }
 
 button {
@@ -179,7 +180,31 @@ button {
 }
 
 .group_result {
-    padding-top: 31.7vh;
+    padding-top: 24.9vh;
+}
+
+@media screen and (max-width: 430px){
+    .group_result {
+        padding-top: 24.9vh;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .group_result {
+        padding-top: 25.6vh;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .group_result {
+        padding-top: 26.6vh;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .group_result {
+        padding-top: 31.6vh;
+    }
 }
 
 .member-wrapper {
