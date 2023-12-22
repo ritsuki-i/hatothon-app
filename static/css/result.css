@@ -209,3 +209,19 @@ button {
 .group_name{
     height: 20%;
 }
+
+#go-back {
+    margin: auto;
+    background-color: #f09937;
+    color: #f5e359;
+    border-radius: 15px;
+    font-size: 120%;
+    height: 40px;
+    width: 120px;
+    font-weight: bold;
+    position: fixed;
+    top: 80vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
