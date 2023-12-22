@@ -166,9 +166,31 @@
     margin-left: 0;
     text-align: center;
   }
+
   .add_members{
     padding-top: 31vh;
     padding-bottom: 21.2vh;
+  }
+
+  @media screen and (max-width: 430px){
+    .add_members{
+      padding-top: 28vh;
+      padding-bottom: 18.5vh;
+    }
+  }
+
+  @media screen and (max-width: 390px){
+    .add_members{
+      padding-top: 30vh;
+      padding-bottom: 20.5vh;
+    }
+  }
+
+  @media screen and (max-width: 375px){
+    .add_members{
+      padding-top: 35vh;
+      padding-bottom: 25vh;
+    }
   }
 
   hr {
