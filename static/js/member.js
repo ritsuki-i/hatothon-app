@@ -197,8 +197,9 @@ function addMember() {
   newTextbox.type = "text";
   newTextbox.name = "get_input";
   newTextbox.className = "name_textbox";
-  newTextbox.placeholder = "名前を入力";
+  newTextbox.placeholder = "名前を入力(5文字以内)";
   newTextbox.required = true;
+  newTextbox.maxLength = "5";
   newTextbox.addEventListener("input", function () {
     checkDropdowns();
   });
