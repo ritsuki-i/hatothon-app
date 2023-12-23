@@ -6,7 +6,7 @@ body {
 
 .main {
     width: 80%;
-    color: #ffff19;
+    color: #f5e359;
     text-align: center;
     margin: 0 auto;
     margin-top: 100px;
@@ -17,16 +17,13 @@ body {
 }
 
 .main h2 {
-    color: #ffff19;
-    transition: 0.3s;
-}
-
-.main h2:hover {
-    opacity: 0.8;
+    color: #f5e359;
 }
 
 .main a {
     text-decoration: none;
+    color: #f5e359;
+    font-size: xx-large;
 }
 
 .main img {
@@ -35,20 +32,28 @@ body {
 }
 
 .main h2 {
-    border-radius: 12px;
-    background-color: #f29d35;
     text-align: center;
-    padding-bottom: 5px;
 }
 
 .option1 {
     width: 200px;
     margin: 10% auto;
+    border-radius: 12px;
+    background-color: #f29d35;
 }
 
 .option2 {
     width: 200px;
     margin: 0 auto;
+    border-radius: 12px;
+    background-color: #f29d35;
+}
+
+#option {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
 }
 
 @media screen and (max-width: 500px) {
@@ -57,15 +62,91 @@ body {
     }
 
     h1 {
-        font-size: 22px;
+        font-size: 220%;
     }
 
     div {
-        width: 150px;
+        width: 80%;
     }
 
     div a h2 {
-        font-size: 18px;
+        font-size: 150%;
     }
 
+    .main img {
+        width: 60%;
+        height: 60%;
+    }
 }
+
+@media screen and (max-width: 430px){
+    .main {
+        margin-top: 160px;
+    }
+    #option {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        margin-top: 70%;
+    }
+    h1 {
+        font-size: 220%;
+    }
+    .option1 {
+        width: 260px;
+        height: 55px;
+    }
+    .option2 {
+        width: 260px;
+        height: 55px;
+    }
+  }
+
+  @media screen and (max-width: 414px){
+    .main {
+        margin-top: 150px;
+    }
+    #option {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        margin-top: 70%;
+    }
+    h1 {
+        font-size: 210%;
+    }
+  }
+
+  @media screen and (max-width: 390px){
+    .main {
+        margin-top: 140px;
+    }
+    #option {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        margin-top: 70%;
+    }
+    h1 {
+        font-size: 200%;
+    }
+  }
+
+  @media screen and (max-width: 375px){
+    .main {
+        margin-top: 80px;
+    }
+    #option {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        margin-top: 45%;
+    }
+    h1 {
+        font-size: 190%;
+    }
+  }
