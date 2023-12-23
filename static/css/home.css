@@ -20,10 +20,13 @@ body {
     color: #f5e359;
 }
 
-.main a {
+a {
+    display: block;
     text-decoration: none;
     color: #f5e359;
     font-size: xx-large;
+    width: 100%;
+    height: 100%;
 }
 
 .main img {
