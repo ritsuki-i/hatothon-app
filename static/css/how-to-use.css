@@ -1,67 +1,67 @@
 body {
-    width: 100%;
-    position: absolute;
-    background-color: #202020;
-    color: #fff;
-    font-family: 'DotGothic16', sans-serif;
-    font-family: 'Kiwi Maru', serif;
+  width: 100%;
+  position: absolute;
+  background-color: #202020;
+  color: #fff;
+  font-family: "DotGothic16", sans-serif;
+  font-family: "Kiwi Maru", serif;
 }
 
 .main {
-    width: 70%;
-    max-width: 800px;
-    margin: 0 auto;
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .main img {
-    width: 50%;
-    border: solid 2px;
-    display: block;
-    /*PC版はこれなし*/
-    margin: 0 auto;
-    /*PC版はこれなし*/
+  width: 50%;
+  border: solid 2px;
+  display: block;
+  /*PC版はこれなし*/
+  margin: 0 auto;
+  /*PC版はこれなし*/
 }
 
 .header-icon1 {
-    margin-top: 5px;
-    width: 45px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  width: 45px;
+  margin-bottom: 5px;
 }
 
 .icon-holder {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .header {
-    border-bottom: solid #fff 1px;
+  border-bottom: solid #fff 1px;
 }
 
 .header1 {
-    display: flex;
+  display: flex;
 }
 
 .return-to-top {
-    position: fixed;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.3s;
-    bottom: 10px;
-    right: 5vw;
+  position: fixed;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  bottom: 10px;
+  right: 5vw;
 }
 
 .return-to-top :hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .main h2 {
-    background-color: black;
-    border-left: solid 5px;
-    padding-left: 5px;
+  background-color: black;
+  border-left: solid 5px;
+  padding-left: 5px;
 }
 
 @media screen and (max-width: 500px) {
-    .main {
-        width: 90%;
-        margin: 0 auto;
-    }
+  .main {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
