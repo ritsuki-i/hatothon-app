@@ -1,52 +1,76 @@
-{% extends "base.html" %}
-{% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/member.css') }}">
+{% extends "base.html" %} {% block content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/member.css') }}"
+/>
 <body>
-
   <form action="/result" method="POST">
-  <div id="container">
-    <div class="fix_component_top">
-      <div class="header">
-        <div class="header1">
-          <div class="icon-holder"><a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="ロゴ画像"
-                class="header-icon1" id="LogoImg"></a></div>
-        </div>
-      </div>
-      <div id="title">メンバー登録</div>
-      <div id="num_Display">
-        <div id="M_numBlock">
-          <div class="white_text">人数</div>
-          <div id="memberNumber">0</div>
-        </div>
-        <div id="G_numBlock">
-          <div class="white_text">グループ数</div>
-          <select id="group_num" name="group_num"></select>
-        </div>
-      </div>
-      <div class="white_text" id="member_text">参加メンバー</div>
-      <hr>
-    </div>
-    <div class="add_members">
-      <div id="image-container">
-      <!-- 画像が表示されるコンテナ -->
-      </div>
-    </div>
-    <div class="fix_component_bottom">
-      <hr>
-      <div id="AR_Button_parent">
-        <div id="AR_Button">
-          <button type="button" onclick="addMember()" id="addButton">+</button>
-          <div id="restNum_Display">
-            <div id="resible">12人まで登録可能</div>
-            <div id="resible_rest">あと11人</div>
+    <div id="container">
+      <div class="fix_component_top">
+        <div class="header">
+          <div class="header1">
+            <div class="icon-holder">
+              <a href="{{ url_for('index') }}"
+                ><img
+                  src="{{ url_for('static', filename='images/logo.png') }}"
+                  alt="ロゴ画像"
+                  class="header-icon1"
+                  id="LogoImg"
+              /></a>
+            </div>
           </div>
-          <button type="button" id="removeButton">−</button>
+        </div>
+        <div id="title">メンバー登録</div>
+        <div id="num_Display">
+          <div id="M_numBlock">
+            <div class="white_text">人数</div>
+            <div id="memberNumber">0</div>
+          </div>
+          <div id="G_numBlock">
+            <div class="white_text">グループ数</div>
+            <select id="group_num" name="group_num"></select>
+          </div>
+        </div>
+        <div class="white_text" id="member_text">参加メンバー</div>
+        <hr />
+      </div>
+      <div class="add_members">
+        <div id="image-container">
+          <!-- 画像が表示されるコンテナ -->
         </div>
       </div>
-      <div id="GB_parent"><p id="error_message">入力値が足りません</p><button type="submit" onclick=location.href="{{ url_for('result') }}" id="G_addButton" disabled>グループ生成</button></div>
+      <div class="fix_component_bottom">
+        <hr />
+        <div id="AR_Button_parent">
+          <div id="AR_Button">
+            <button type="button" onclick="addMember()" id="addButton">
+              +
+            </button>
+            <div id="restNum_Display">
+              <div id="resible">12人まで登録可能</div>
+              <div id="resible_rest">あと11人</div>
+            </div>
+            <button type="button" id="removeButton">−</button>
+          </div>
+        </div>
+        <div id="GB_parent">
+          <p id="error_message">入力値が足りません</p>
+          <button
+            type="submit"
+            onclick="location.href"
+            ="{{ url_for('result') }}"
+            id="G_addButton"
+            disabled
+          >
+            グループ生成
+          </button>
+        </div>
+      </div>
     </div>
-    </form>
-  </div>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/member.js') }}"></script>
+  </form>
+  <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='js/member.js') }}"
+  ></script>
 </body>
 {% endblock %}

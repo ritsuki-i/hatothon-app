@@ -21,9 +21,11 @@ body {
   background-color: #323338;
   font-family: "M PLUS Rounded 1c";
   font-weight: 700;
+  text-align: center;
   width: 100vw;
   margin-top: 0;
   margin-left: 0;
+  height: 100vh;
 }
 
 .white_text {
@@ -146,20 +148,13 @@ body {
   font-size: larger;
 }
 
-#conrtainer {
-  text-align: center;
-}
-
-html {
-  text-align: center;
-}
-
 .fix_component_bottom {
   position: fixed;
   bottom: 0;
   width: 100vw;
   background-color: #323338;
 }
+
 .fix_component_top {
   position: fixed;
   background-color: #323338;
@@ -220,4 +215,12 @@ hr {
 
 #error_message {
   color: rgb(255, 0, 0);
+}
+
+html {
+  height: 100%;
+}
+
+form {
+  height: 100%;
 }

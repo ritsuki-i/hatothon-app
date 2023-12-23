@@ -1,40 +1,60 @@
-{% extends "base.html" %}
-{% block content %}
-<link rel="stylesheet" href="./static/css/how-to-use.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+{% extends "base.html" %} {% block content %}
+<link rel="stylesheet" href="./static/css/how-to-use.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@300&display=swap"
+  rel="stylesheet"
+/>
 <body>
-    <div class="header">
-        <div class="header1">
-            <div class="icon-holder"><a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="ロゴ画像"
-                        class="header-icon1" id="LogoImg"></a></div>
-        </div>
+  <div class="header">
+    <div class="header1">
+      <div class="icon-holder">
+        <a href="{{ url_for('index') }}"
+          ><img
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="ロゴ画像"
+            class="header-icon1"
+            id="LogoImg"
+        /></a>
+      </div>
     </div>
+  </div>
 
-    <div class="main">
-        <h1>使い方</h1>
-        <h2>スタート</h2>
-        <h4>「グループを作る」をクリック</h4>
-        <img src="{{ url_for('static', filename='images/how-to-use.png') }}" alt="">
+  <div class="main">
+    <h1>使い方</h1>
+    <h2>スタート</h2>
+    <h4>「グループを作る」をクリック</h4>
+    <img
+      src="{{ url_for('static', filename='images/how-to-use.png') }}"
+      alt=""
+    />
 
-        <h2>グループ生成</h2>
-        <h4>①作りたいグループ数を選択する<br>②名前・MBTIを登録する<br>③「グループを作る」をクリック</h4>
-        <img src="{{ url_for('static', filename='images/how-to-use.png') }}" alt="">
+    <h2>グループ生成</h2>
+    <h4>
+      ①作りたいグループ数を選択する<br />②名前・MBTIを登録する<br />③「グループを作る」をクリック
+    </h4>
+    <img
+      src="{{ url_for('static', filename='images/how-to-use.png') }}"
+      alt=""
+    />
 
-        <h2>結果を見る</h2>
-        <h4>グループ名を設定する</h4>
-        <img src="{{ url_for('static', filename='images/how-to-use.png') }}" alt="">
-        <br>
-        <br>
+    <h2>結果を見る</h2>
+    <h4>グループ名を設定する</h4>
+    <img
+      src="{{ url_for('static', filename='images/how-to-use.png') }}"
+      alt=""
+    />
+    <br />
+    <br />
 
-        <h1>Q&A</h1>
-        <h2>マッチ度とは？</h2>
-        <h4>マッチ度とは～</h4>
-    </div>
+    <h1>Q&A</h1>
+    <h2>マッチ度とは？</h2>
+    <h4>マッチ度とは～</h4>
+  </div>
 
-    <div>
-        <a href="{{ url_for('index') }}" class="return-to-top"><h1>戻る</h1></a>
-    </div>
+  <div>
+    <a href="{{ url_for('index') }}" class="return-to-top"><h1>戻る</h1></a>
+  </div>
 </body>
 {% endblock %}
