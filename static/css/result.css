@@ -71,10 +71,14 @@ img.mbti_img {
 
 body {
   background-color: #323338;
-  font-family: "M PLUS Rounded 1c";
-  font-weight: 700;
+  font-weight: 500;
   width: 100vw;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 input {
@@ -90,7 +94,6 @@ input {
 
 .result {
   font-size: 200%;
-  font-weight: bold;
   color: #f5e359;
   text-align: center;
   margin-bottom: 1vh;
@@ -127,6 +130,7 @@ input {
   display: flex;
   margin-left: 15%;
   margin-right: 15%;
+  font-weight: 700;
 }
 
 .d_result {
@@ -212,7 +216,8 @@ button {
   font-size: 120%;
   height: 40px;
   width: 120px;
-  font-weight: bold;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  /* font-weight: bold; */
   /* position: fixed;
   top: max-height;
   bottom: 0;
@@ -223,10 +228,3 @@ button {
 /* html {
     height: 100%;
 } */
-
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  position: relative;
-}
