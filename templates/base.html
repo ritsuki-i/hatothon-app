@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:url" content="ページURL" />
     <meta property="og:site_name" content="-G-性格ぴったりグループ生成アプリ" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="-G-性格ぴったりグループ生成アプリ" />
-    <meta property="og:description" content="MBTIの結果を用いて相性がピッタリなグループ分けを行うWEBサイトです。" />
-    <meta property="og:image" content="{{ url_for('static', filename='images/logo.png') }}" />
+    <meta
+      property="og:description"
+      content="MBTIの結果を用いて相性がピッタリなグループ分けを行うWEBサイトです。"
+    />
+    <meta
+      property="og:image"
+      content="{{ url_for('static', filename='images/logo.png') }}"
+    />
     <title>-G-性格ぴったりグループ生成アプリ</title>
-    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
-    <link rel="stylesheet" href="./static/css/header.css">
-</head>
-{% block content %}
-{% endblock %}
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/logo.png') }}"
+    />
+    <link rel="stylesheet" href="./static/css/header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=M+PLUS+Rounded+1c:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  {% block content %} {% endblock %}
 </html>

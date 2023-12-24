@@ -3,14 +3,17 @@ body {
   position: absolute;
   background-color: #202020;
   color: #fff;
-  font-family: "DotGothic16", sans-serif;
-  font-family: "Kiwi Maru", serif;
+  /* font-family: "DotGothic16", sans-serif;
+  font-family: "Kiwi Maru", serif; */
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin: 0%;
 }
 
 .main {
   width: 70%;
   max-width: 800px;
   margin: 0 auto;
+  margin-left: 0 !important;
 }
 
 .main img {
@@ -20,24 +23,6 @@ body {
   /*PC版はこれなし*/
   margin: 0 auto;
   /*PC版はこれなし*/
-}
-
-.header-icon1 {
-  margin-top: 5px;
-  width: 45px;
-  margin-bottom: 5px;
-}
-
-.icon-holder {
-  margin: 0 auto;
-}
-
-.header {
-  border-bottom: solid #fff 1px;
-}
-
-.header1 {
-  display: flex;
 }
 
 .return-to-top {
@@ -55,8 +40,9 @@ body {
 
 .main h2 {
   background-color: black;
-  border-left: solid 5px;
-  padding-left: 5px;
+  border-right: solid 5px;
+  padding-right: 15px;
+  text-align: right;
 }
 
 @media screen and (max-width: 500px) {
@@ -64,4 +50,13 @@ body {
     width: 90%;
     margin: 0 auto;
   }
+}
+
+.main h4 {
+  font-weight: 500;
+  margin-left: 3vw;
+}
+
+h1 {
+  margin-left: 3vw;
 }

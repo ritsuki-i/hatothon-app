@@ -1,18 +1,21 @@
-{% extends "base.html" %}
-{% block content %}
-<link rel="stylesheet" href="./static/css/home.css"> 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
-</head>
-
+{% extends "base.html" %} {% block content %}
+<link rel="stylesheet" href="./static/css/home.css" />
 <body>
-    <div class="main">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" class="main_logo">
-        <h1>性格ぴったり<br>グループ生成アプリ</h1>
-        <div id="option">
-        <div class="option1"><a href="{{ url_for('member') }}" id="group_make">グループを作る</a></div>
-        <div class="option2"><a href="{{ url_for('how_to_use') }}" id="how">使い方</a></div>
+  <div class="main">
+    <img
+      src="{{ url_for('static', filename='images/logo.png') }}"
+      alt=""
+      class="main_logo"
+    />
+    <h1>性格ぴったり<br />グループ生成アプリ</h1>
+    <div id="option">
+      <div class="option1">
+        <a href="{{ url_for('member') }}" id="group_make">グループを作る</a>
+      </div>
+      <div class="option2">
+        <a href="{{ url_for('how_to_use') }}" id="how">使い方</a>
+      </div>
     </div>
+  </div>
 </body>
 {% endblock %}

@@ -1,11 +1,5 @@
 {% extends "base.html" %} {% block content %}
 <link rel="stylesheet" href="./static/css/how-to-use.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@300&display=swap"
-  rel="stylesheet"
-/>
 <body>
   <div class="header">
     <div class="header1">
@@ -20,9 +14,8 @@
       </div>
     </div>
   </div>
-
+  <h1>使い方</h1>
   <div class="main">
-    <h1>使い方</h1>
     <h2>スタート</h2>
     <h4>「グループを作る」をクリック</h4>
     <img
@@ -32,7 +25,7 @@
 
     <h2>グループ生成</h2>
     <h4>
-      ①作りたいグループ数を選択する<br />②名前・MBTIを登録する<br />③「グループを作る」をクリック
+      ①名前・MBTIを登録する<br />②作りたいグループ数を選択する<br />③「グループ生成」をクリック
     </h4>
     <img
       src="{{ url_for('static', filename='images/how-to-use.png') }}"
