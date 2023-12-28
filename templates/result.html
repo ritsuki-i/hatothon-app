@@ -26,9 +26,7 @@
       </div>
       <div class="groups">
         <div class="white_text">グループ数</div>
-        <div class="d_result">
-          <span id="number_of_groups">{{ grouping_num }}</span>
-        </div>
+        <div class="d_result" id="number_of_groups">{{ grouping_num }}</div>
       </div>
       <div class="score">
         <div class="white_text">マッチ度</div>
@@ -65,15 +63,18 @@
     <hr />
     {% endfor %}
     <button type="button" id="go-back">戻る</button>
-    <button type="button" id="save-result" onclick="shareResult()">結果を共有</button>
-    <div id="testspace"></div>
+    <button type="button" id="share-result">結果を共有</button>
+    <!--デバッグ用-->
+    <!--<div id="testspace"></div>-->
   </div>
-  <!--結果共有画像生成-->
+  <!--結果共有画像生成 Dom-to-Image-->
+  <!--https://github.com/tsayen/dom-to-image-->
   <script 
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"
   ></script>
-  <!--結果共有画像保存-->
+  <!--結果共有画像保存 FileSaver-->
+  <!--https://github.com/eligrey/FileSaver.js-->
   <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"
@@ -82,6 +83,5 @@
     type="text/javascript"
     src="{{ url_for('static', filename='js/result.js') }}"
   ></script>
-
 </body>
 {% endblock %}
