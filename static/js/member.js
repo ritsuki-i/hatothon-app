@@ -89,9 +89,9 @@ plusButton.addEventListener("click", () => {
   if (count < 12) {
     addMember();
     count++;
+    number.innerHTML = count;
     addOption();
     InDeButtonControl();
-    number.innerHTML = count;
   }
 });
 
@@ -240,7 +240,6 @@ function addMember() {
 for (i = 0; i < 4; i++) {
   const auto_button = document.getElementById("addButton");
   auto_button.click();
-  number.innerHTML = count;
 }
 
 // 残り追加可能人数反映
