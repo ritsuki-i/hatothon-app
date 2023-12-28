@@ -207,7 +207,7 @@ button {
   height: 20%;
 }
 
-#go-back {
+#go-back, #save-result {
   margin-top: 5%;
   margin-bottom: 10%;
   background-color: #f09937;
