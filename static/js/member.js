@@ -1,19 +1,3 @@
-//グローバル変数の定義
-// 生成ボタン状態制御
-let flag3 = 0;
-
-// 人数を定義
-let count = 0;
-
-// 人数表示を定義
-const number = document.getElementById("memberNumber");
-
-// 人数を増やすボタンを定義
-const plusButton = document.getElementById("addButton");
-
-// 人数を減らすボタンを定義
-const reduceButton = document.getElementById("removeButton");
-
 // MBTIの選択を変更する関数
 function changeImage(selectElement) {
   // 選択された値を取得
@@ -87,7 +71,20 @@ function changeImage(selectElement) {
   imageContainer.appendChild(imageElement);
 }
 
+// 生成ボタン状態制御
+let flag3 = 0;
+
 // 人数を増やす
+// 人数表示を定義
+const number = document.getElementById("memberNumber");
+
+// 人数を増やすボタンを定義
+const plusButton = document.getElementById("addButton");
+
+// 人数を定義
+let count = 0;
+
+// 人数を増やす各関数の呼び出し
 plusButton.addEventListener("click", () => {
   if (count < 12) {
     addMember();
@@ -268,6 +265,7 @@ function addOption() {
 }
 
 // 人数を減らす
+const reduceButton = document.getElementById("removeButton");
 reduceButton.addEventListener("click", () => {
   if (count > 4) {
     count = count - 1;
