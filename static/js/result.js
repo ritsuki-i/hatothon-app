@@ -7,10 +7,12 @@ var number_of_groups = document.getElementById("number_of_groups").innerHTML;
 
 document.getElementById("share-result").addEventListener("click", () => {
   //時間かかるため状態表示
-  document.getElementById('share-result').innerHTML = '共有中...';
+  document.getElementById("share-result").innerHTML = "共有中...";
   //長いため別関数へ
-  generatePicture().then(function(resultBlob) {
-
+  generatePicture().then(function (resultBlob) {
+    //スクショ用ヘッダーの非表示
+    var header_content = document.getElementById("fix_component2");
+    header_content.style.display = "none";
     //入力されたグループ名を画像内で一体化させたかった　の後処理
     /* 
     for (var i = 0; i < number_of_groups; i++) {
@@ -28,27 +30,27 @@ document.getElementById("share-result").addEventListener("click", () => {
     if (navigator.canShare && navigator.canShare({ files: [image] })) {
       //共有
       navigator.share({
-        title: 'n人組を共有',
-        text: '作成したグループを共有',
-        url: document.getElementById('toppage').href,
+        title: "n人組を共有",
+        text: "作成したグループを共有",
+        url: document.getElementById("toppage").href,
         files: [image],
-      })
+      });
     } else {
       //共有利用不可の場合、画像を保存させる(MacのChrome等)
       image = null;
-      var filename = number_of_groups + 'groups-result.png';
+      var filename = number_of_groups + "groups-result.png";
       saveAs(resultBlob, filename);
-      window.alert('結果を保存しました！');
+      window.alert("結果を保存しました！");
     }
     //ボタンを元に戻す
-    document.getElementById('share-result').innerHTML = '結果を共有';
+    document.getElementById("share-result").innerHTML = "結果を共有";
   });
 });
 
 //結果画面を画像化する
 //@return Blob
 function generatePicture() {
-
+  
   //入力されたグループ名を画像内で一体化させたかった
   /*
     var group_names = [];
@@ -65,17 +67,34 @@ function generatePicture() {
       wrapper.appendChild(group_names[i]);
     }
     */
-
+  //スクショ用ヘッダーの表示
+  var header_content = document.getElementById("fix_component2");
+  header_content.style.display = "block";
   //body全体をスクショの対象
-  var content = document.getElementById('body');
+  var content = document.getElementById("scshoArea");
   //スクショの解像度は横1080pxとする
-  var currentWidth = Number(getComputedStyle(document.getElementById('body')).width.replace('px', ''));
+  var currentWidth = Number(
+    getComputedStyle(document.getElementById("body")).width.replace("px", "")
+  );
   //解像度調整のための倍率算出
   var scale = 1080 / currentWidth;
 
   //スクショの最適な縦pxを算出
-  var wrapperHeight = scale * Number(getComputedStyle(document.getElementById('group0_wrapper')).height.replace('px', ''));
-  var estimatedHeight = scale * Number(getComputedStyle(document.getElementById('fix_component')).height.replace('px', ''));
+  var wrapperHeight =
+    scale *
+    Number(
+      getComputedStyle(
+        document.getElementById("group0_wrapper")
+      ).height.replace("px", "")
+    );
+  var estimatedHeight =
+    scale *
+    Number(
+      getComputedStyle(document.getElementById("fix_component")).height.replace(
+        "px",
+        ""
+      )
+    );
   estimatedHeight = estimatedHeight + 20 + number_of_groups * wrapperHeight;
 
   //dom-to-imageでスクショ化を開始
@@ -83,8 +102,8 @@ function generatePicture() {
     width: 1080,
     height: estimatedHeight,
     style: {
-      transform: 'scale(' + scale + ')',
-      transformOrigin: 'top left'
-    }
+      transform: "scale(" + scale + ")",
+      transformOrigin: "top left",
+    },
   });
 }

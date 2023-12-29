@@ -40,8 +40,44 @@
     <hr />
   </div>
   <div class="number">
-    {% for group_name in groups_name %}
-    <div class="group-wrapper" id="group{{ loop.index0 }}_wrapper">
+    <div id="scshoArea">
+      <div id="fix_component2">
+        <div class="header">
+          <div class="header1">
+            <div class="icon-holder">
+              <a href="{{ url_for('index') }}" id="toppage"
+                ><img
+                  src="{{ url_for('static', filename='images/logo.png') }}"
+                  alt="ロゴ画像"
+                  class="header-icon1"
+                  id="LogoImg"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="result">生成結果</div>
+        <div id="result_wrap">
+          <div class="members">
+            <div class="white_text">人数</div>
+            <div class="d_result">{{ numofpeople }}</div>
+          </div>
+          <div class="groups">
+            <div class="white_text">グループ数</div>
+            <div class="d_result" id="number_of_groups">{{ grouping_num }}</div>
+          </div>
+          <div class="score">
+            <div class="white_text">マッチ度</div>
+            <div class="d_result">{{ group_score }}%</div>
+          </div>
+        </div>
+        <div id="MG_text">
+          <div class="white_text" id="group_text">グループ名</div>
+          <div class="white_text" id="member_text">メンバー</div>
+        </div>
+        <hr />
+      </div>
+      {% for group_name in groups_name %}
+      <div class="group-wrapper" id="group{{ loop.index0 }}_wrapper">
         <input
           id="group{{ loop.index0 }}_name"
           type="text"
@@ -49,29 +85,31 @@
           placeholder="グループ名"
           maxlength="6"
         />
-      <div class="wrapper">
-        {% for name in group_name %}
-        <div class="member-wrapper">
-          <div id="member_mbti">
-            <img class="mbti_img" src="{{ mbti_dic[name[1]] }}" alt="" />
-            <div id="member_name">{{ name[0] }}</div>
+        <div class="wrapper">
+          {% for name in group_name %}
+          <div class="member-wrapper">
+            <div id="member_mbti">
+              <img class="mbti_img" src="{{ mbti_dic[name[1]] }}" alt="" />
+              <div id="member_name">{{ name[0] }}</div>
+            </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
+      <hr />
+      {% endfor %}
     </div>
-    <hr />
-    {% endfor %}
-    <div id="OptionButton">
-      <button type="button" id="go-back">戻る</button>
-      <button type="button" id="share-result">結果を保存</button>
-    </div>
-    <!--デバッグ用-->
-    <!--<div id="testspace"></div>-->
   </div>
+  <hr />
+  <div id="OptionButton">
+    <button type="button" id="go-back">戻る</button>
+    <button type="button" id="share-result">結果を保存</button>
+  </div>
+  <!--デバッグ用-->
+  <!--<div id="testspace"></div>-->
   <!--結果共有画像生成 Dom-to-Image-->
   <!--https://github.com/tsayen/dom-to-image-->
-  <script 
+  <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"
   ></script>
