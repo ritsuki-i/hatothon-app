@@ -232,6 +232,10 @@ function addMember() {
   // コンテナに新しい入力欄を追加
   container.appendChild(pullDownContainer);
 
+
+  //初期画像挿入
+  changeImage(pullDown);
+
   // 残り人数反映
   rest2();
 
@@ -384,4 +388,83 @@ function checkDropdowns() {
   }
   const error_message = document.getElementById("error_message");
   error_message.hidden = !areAllDropdownsSelected();
+}
+
+
+// ページ読み込み時にフォームの内容をロード
+window.onload = function () {
+  loadForm();
+  const dropdowns = document.querySelectorAll(".dropdown");
+  for (const dropdown of dropdowns) {
+    changeImage(dropdown);
+  }
+  areAllDropdownsSelected();
+  checkDropdowns();
+};
+
+// フォームの内容をローカルストレージに保存
+document.getElementById("G_addButton").addEventListener("click",() => {
+  const number = document.querySelector("#memberNumber");
+  console.log(number.textContent);
+  localStorage.setItem("memberNumber", Number(number.textContent));
+  let dropdown = document.getElementById("group_num");
+  const form = document.getElementById("myForm");
+  for (let i = 0; i < form.elements.length; i++) {
+    const element = form.elements[i];
+    if (element.type !== "button") {
+      if (element.type === "select-one") {
+        localStorage.setItem(
+          element.name + String(i),
+          element.options[element.selectedIndex].value
+        );
+      } else {
+        localStorage.setItem(element.name + String(i), element.value);
+      }
+    }
+  }
+});
+
+// ローカルストレージからフォームの内容を読み込み
+function loadForm() {
+  const form = document.getElementById("myForm");
+  const member_number = localStorage.getItem("memberNumber");
+  for (let i = 0; i < member_number-4; i++){
+    addMember();
+    if (count < 12) {
+      count++;
+    }
+    addOption();
+    number.innerHTML = count;
+    if (count == 12) {
+      plusButton.disabled = true;
+      plusButton.style.background = "#323338";
+    }
+    if (count != 4) {
+      reduceButton.disabled = false;
+      reduceButton.style.background = "rgb(255, 133, 133)";
+    } else {
+      reduceButton.disabled = true;
+      reduceButton.style.background = "#323338";
+    }
+  }
+    for (let i = 0; i < form.elements.length; i++) {
+      const element = form.elements[i];
+      if (element.type !== "button") {
+        const storedValue = localStorage.getItem(
+          element.name + String(i)
+        );
+        if (storedValue !== null) {
+          if (element.type === "select-one") {
+            element.value = storedValue;
+          } else {
+            element.value = storedValue;
+          }
+        }
+      }
+    }
+}
+//保持された入力情報の初期化
+function clearStorage() {
+  localStorage.clear();
+  location.reload();
 }
