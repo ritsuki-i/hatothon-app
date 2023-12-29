@@ -1,7 +1,3 @@
-document.getElementById("go-back").addEventListener("click", () => {
-  history.back();
-});
-
 //生成されたグループ数を取得
 var number_of_groups = document.getElementById("number_of_groups").innerHTML;
 

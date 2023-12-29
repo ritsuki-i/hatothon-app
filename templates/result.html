@@ -62,8 +62,10 @@
     </div>
     <hr />
     {% endfor %}
-    <button type="button" id="go-back">戻る</button>
-    <button type="button" id="share-result">結果を共有</button>
+    <form action="/member" method="POST">
+      <button type="submit" id="go-back" src="{{ url_for('member') }}">戻る</button>
+      <button type="button" id="share-result">結果を共有</button>
+    </form>
     <!--デバッグ用-->
     <!--<div id="testspace"></div>-->
   </div>
