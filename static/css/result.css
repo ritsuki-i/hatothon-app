@@ -78,7 +78,7 @@ body {
   flex-direction: column;
   height: 100vh;
   position: relative;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 input {
@@ -175,10 +175,6 @@ input {
   z-index: 10000;
 }
 
-button {
-  margin: 10%;
-}
-
 .member-wrapper {
   /* text-align: center; */
   margin-left: 4%;
@@ -207,7 +203,8 @@ button {
   height: 20%;
 }
 
-#go-back, #share-result {
+#go-back,
+#share-result {
   margin-top: 5%;
   margin-bottom: 10%;
   background-color: #f09937;
@@ -216,13 +213,23 @@ button {
   font-size: 120%;
   height: 40px;
   width: 120px;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   /* font-weight: bold; */
   /* position: fixed;
   top: max-height;
   bottom: 0;
   left: 0;
   right: 0; */
+}
+
+#OptionButton {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#fix_component2 {
+  display: none;
+  background-color: #323338;
 }
 
 /* html {
