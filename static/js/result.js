@@ -1,3 +1,7 @@
+document.getElementById("go-back").addEventListener("click", () => {
+  history.back();
+});
+
 //生成されたグループ数を取得
 var number_of_groups = document.getElementById("number_of_groups").innerHTML;
 
@@ -5,10 +9,16 @@ document.getElementById("share-result").addEventListener("click", () => {
   //スクショ用ヘッダーの表示
   var Scsho_header_content = document.getElementById("fix_component2");
   Scsho_header_content.style.display = "block";
+  //元のヘッダーの非表示
   var header_content = document.getElementById("fix_component");
   header_content.style.display = "none";
   //時間かかるため状態表示
-  document.getElementById("share-result").innerHTML = "共有中...";
+  const nowshare=document.getElementById("share-result")
+  nowshare.innerHTML = "共有中...";
+  nowshare.style.background = "#323338";
+  nowshare.style.color = "#929292";
+  nowshare.disabled = true;
+
   //長いため別関数へ
   generatePicture().then(function (resultBlob) {
     //入力されたグループ名を画像内で一体化させたかった　の後処理
@@ -41,10 +51,15 @@ document.getElementById("share-result").addEventListener("click", () => {
       window.alert("結果を保存しました！");
     }
     //ボタンを元に戻す
-    document.getElementById("share-result").innerHTML = "結果を共有";
+    // document.getElementById("share-result").innerHTML = "結果を保存";
+    nowshare.innerHTML = "結果を保存";
+    nowshare.style.background = "#f09937";
+    nowshare.style.color = "#f4e997";
+    nowshare.disabled = false;
     //スクショ用ヘッダーの非表示
     var Scsho_header_content = document.getElementById("fix_component2");
     Scsho_header_content.style.display = "none";
+    //元のヘッダーの表示
     var header_content = document.getElementById("fix_component");
     header_content.style.display = "block";
   });
@@ -71,38 +86,38 @@ function generatePicture() {
     */
   //#scshoAreaをスクショの対象
   var content = document.getElementById("scshoArea");
-  //スクショの解像度は横1080pxとする
-  var currentWidth = Number(
-    getComputedStyle(document.getElementById("scshoArea")).width.replace("px", "")
-  );
-  //解像度調整のための倍率算出
-  var scale = 1080 / currentWidth;
+  // //スクショの解像度は横1080pxとする
+  // var currentWidth = Number(
+  //   getComputedStyle(document.getElementById("scshoArea")).width.replace("px", "")
+  // );
+  // //解像度調整のための倍率算出
+  // var scale = 1080 / currentWidth;
 
-  //スクショの最適な縦pxを算出
-  var wrapperHeight =
-    scale *
-    Number(
-      getComputedStyle(
-        document.getElementById("group0_wrapper")
-      ).height.replace("px", "")
-    );
-  var estimatedHeight =
-    scale *
-    Number(
-      getComputedStyle(document.getElementById("fix_component2")).height.replace(
-        "px",
-        ""
-      )
-    );
-  estimatedHeight = estimatedHeight + 20 + number_of_groups * wrapperHeight;
+  // //スクショの最適な縦pxを算出
+  // var wrapperHeight =
+  //   scale *
+  //   Number(
+  //     getComputedStyle(
+  //       document.getElementById("group0_wrapper")
+  //     ).height.replace("px", "")
+  //   );
+  // var estimatedHeight =
+  //   scale *
+  //   Number(
+  //     getComputedStyle(document.getElementById("fix_component2")).height.replace(
+  //       "px",
+  //       ""
+  //     )
+  //   );
+  // estimatedHeight = estimatedHeight + 20 + number_of_groups * wrapperHeight;
 
   //dom-to-imageでスクショ化を開始
   return domtoimage.toBlob(content, {
-    width: 1080,
-    height: estimatedHeight,
-    style: {
-      transform: "scale(" + scale + ")",
-      transformOrigin: "top left",
-    },
+    // width: 1080,
+    // height: estimatedHeight,
+    // style: {
+    //   transform: "scale(" + scale + ")",
+    //   transformOrigin: "top left",
+    // },
   });
 }
