@@ -227,6 +227,11 @@ input {
   justify-content: space-evenly;
 }
 
+#fix_component2 {
+  display: none;
+  background-color: #323338;
+}
+
 /* html {
     height: 100%;
 } */
