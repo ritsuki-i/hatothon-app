@@ -231,7 +231,7 @@ input {
 #go-back {
   touch-action: manipulation;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   background-color: #154e6f;
   color: #bfd7ea;
   border-radius: 14px;
@@ -250,7 +250,7 @@ input {
 #share-result {
   touch-action: manipulation;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   background-color: #f09937;
   color: #f4e997;
   border-radius: 14px;
