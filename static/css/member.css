@@ -88,6 +88,7 @@ body {
   font-size: 240%;
   background-color: rgb(255, 113, 113);
   color: #ffffff;
+  text-align: center;
 }
 
 #addButton {
@@ -98,6 +99,7 @@ body {
   font-size: 240%;
   background-color: rgb(113, 190, 255);
   color: #ffffff;
+  text-align: center;
 }
 
 #GB_parent {
@@ -232,4 +234,8 @@ html {
 
 form {
   height: 100%;
+}
+
+.material-symbols-outlined {
+  text-align: center;
 }
