@@ -1,4 +1,20 @@
-// 画像を変更する関数
+//グローバル変数の定義
+// 生成ボタン状態制御
+let flag3 = 0;
+
+// 人数を定義
+let count = 0;
+
+// 人数表示を定義
+const number = document.getElementById("memberNumber");
+
+// 人数を増やすボタンを定義
+const plusButton = document.getElementById("addButton");
+
+// 人数を減らすボタンを定義
+const reduceButton = document.getElementById("removeButton");
+
+// MBTIの選択を変更する関数
 function changeImage(selectElement) {
   // 選択された値を取得
   let selectedValue = selectElement.value;
@@ -71,12 +87,20 @@ function changeImage(selectElement) {
   imageContainer.appendChild(imageElement);
 }
 
-//ボタン状況記憶
-let flag3 = 0;
+// 人数を増やす
+plusButton.addEventListener("click", () => {
+  if (count < 12) {
+    addMember();
+    count++;
+    number.innerHTML = count;
+    addOption();
+    InDeButtonControl();
+  }
+});
 
-// メンバーを追加・削除する関数
+//新しい入力欄を作成
 function addMember() {
-  // 新しい画像選択の要素を作成
+  // 新しい入力欄のコンテナを作成
   let pullDownContainer = document.createElement("div");
   pullDownContainer.className = "image-container";
 
@@ -190,7 +214,7 @@ function addMember() {
   // プルダウンのコンテナを取得
   let container = document.getElementById("image-container");
 
-  //名前を入れるテキストボックス
+  // 名前を入れるテキストボックス
   let newTextbox = document.createElement("input");
   newTextbox.type = "text";
   newTextbox.name = "get_input";
@@ -201,76 +225,34 @@ function addMember() {
   newTextbox.addEventListener("input", function () {
     checkDropdowns();
   });
+
+  // プルダウンコンテナに新しいテキストボックスを追加
   pullDownContainer.appendChild(newTextbox);
 
-  // コンテナに新しいプルダウンを追加
-  if (count < 12) {
-    container.appendChild(pullDownContainer);
-  }
+  // コンテナに新しい入力欄を追加
+  container.appendChild(pullDownContainer);
 
-  //残り人数反映
+
+  //初期画像挿入
+  changeImage(pullDown);
+
+  // 残り人数反映
   rest2();
 
-  //ボタン有効化チェック
+  // ボタン有効化チェック
   checkDropdowns();
 }
 
-//人数カウント
-const number = document.querySelector("#memberNumber");
-
-//人数を増やす
-const plusButton = document.getElementById("addButton");
-
-let count = 0;
-
-plusButton.addEventListener("click", () => {
-  if (count < 12) {
-    count++;
-  }
-  addOption();
-  number.innerHTML = count;
-  if (count == 12) {
-    plusButton.disabled = true;
-    plusButton.style.background = "#323338";
-  }
-  if (count != 4) {
-    reduceButton.disabled = false;
-    reduceButton.style.background = "rgb(255, 133, 133)";
-  } else {
-    reduceButton.disabled = true;
-    reduceButton.style.background = "#323338";
-  }
-});
-
-//人数を減らす
-const reduceButton = document.querySelector("#removeButton");
-
-reduceButton.addEventListener("click", () => {
-  if (count > 4) {
-    count = count - 1;
-    removeMember();
-  }
-  number.innerHTML = count;
-  if (count != 12) {
-    plusButton.disabled = false;
-    plusButton.style.background = "rgb(133, 210, 255)";
-  }
-  if (count == 4) {
-    reduceButton.disabled = true;
-    reduceButton.style.background = "#323338";
-  }
-});
-
-//最初に4回自動おし
+// 最初に4回追加ボタン自動おし
 for (i = 0; i < 4; i++) {
   const auto_button = document.getElementById("addButton");
   auto_button.click();
 }
 
-//残り人数反映
+// 残り追加可能人数反映
 rest();
 
-//グループ数のプルダウン制御
+// グループ数のプルダウンを追加
 function addOption() {
   // ドロップダウンメニューの要素を取得
   let dropdown = document.getElementById("group_num");
@@ -289,33 +271,62 @@ function addOption() {
   }
 }
 
-//メンバー削除
+// 人数を減らす
+reduceButton.addEventListener("click", () => {
+  if (count > 4) {
+    count = count - 1;
+    removeMember();
+    InDeButtonControl();
+    number.innerHTML = count;
+  }
+
+  //残り追加可能人数反映
+  rest();
+
+  //生成ボタン有効化チェック
+  checkDropdowns();
+});
+
+//入力欄とグループ数オプションの削除
 function removeMember() {
+  //入力欄削除
   const removeM = document.querySelector(".image-container:last-child");
   removeM.remove();
 
   //グループ数オプション削除
   const removeG = document.querySelector("option:last-child");
-  if (count >= 3 && count < 12 && count % 2 == 1) {
+  if (count > 4 && count < 12 && count % 2 == 1) {
     removeG.remove();
   }
-
-  //残り人数反映
-  rest();
-
-  //ボタン有効化チェック
-  checkDropdowns();
 }
 
-//残り人数表示
-//初期値およびメンバー削除時の残り人数表示の変更
+//増減ボタン状態制御
+function InDeButtonControl() {
+  if (count == 12) {
+    plusButton.disabled = true;
+    plusButton.style.background = "#323338";
+  } else {
+    plusButton.disabled = false;
+    plusButton.style.background = "rgb(133, 210, 255)";
+  }
+  if (count == 4) {
+    reduceButton.disabled = true;
+    reduceButton.style.background = "#323338";
+  } else {
+    reduceButton.disabled = false;
+    reduceButton.style.background = "rgb(255, 133, 133)";
+  }
+}
+
+//残り追加可能人数表示
+//初期値およびメンバー削除時の残り追加可能人数表示の変更
 function rest() {
   let ato = document.getElementById("resible_rest");
   ato.innerHTML = "あと" + (12 - count) + "人";
   ato.style.color = "#f09937";
 }
 
-//メンバー追加時の残り人数表示の変更
+//メンバー追加時の残り追加可能人数表示の変更
 function rest2() {
   let ato = document.getElementById("resible_rest");
   if (12 - (count + 1) <= 0) {
@@ -327,12 +338,12 @@ function rest2() {
   }
 }
 
-//要素を全て入力できたか確認
+// 要素を全て入力できたか確認
 function areAllDropdownsSelected() {
   let flag1 = 1;
   let flag2 = 1;
 
-  //プルダウンの選択変更監視
+  // プルダウンの選択変更監視
   const dropdowns = document.querySelectorAll(".dropdown");
   for (const dropdown of dropdowns) {
     if (dropdown.value === "option0") {
@@ -347,10 +358,8 @@ function areAllDropdownsSelected() {
       flag2 = 0;
     }
   }
-  // console.log(flag1)
-  // console.log(flag2)
 
-  //どちらも全て入力されていたらボタンを有効化
+  // どちらも全て入力されていたら生成ボタンを有効化
   if (flag1 == 1 && flag2 == 1) {
     if (flag3 == 0) {
       const submitButton_on = document.getElementById("G_addButton");
@@ -368,7 +377,7 @@ function areAllDropdownsSelected() {
   }
 }
 
-//ボタンを有効化
+// 生成ボタンを有効化
 function checkDropdowns() {
   if (flag3 == 0) {
     const submitButton0 = document.getElementById("G_addButton");
@@ -379,4 +388,83 @@ function checkDropdowns() {
   }
   const error_message = document.getElementById("error_message");
   error_message.hidden = !areAllDropdownsSelected();
+}
+
+
+// ページ読み込み時にフォームの内容をロード
+window.onload = function () {
+  loadForm();
+  const dropdowns = document.querySelectorAll(".dropdown");
+  for (const dropdown of dropdowns) {
+    changeImage(dropdown);
+  }
+  areAllDropdownsSelected();
+  checkDropdowns();
+};
+
+// フォームの内容をローカルストレージに保存
+document.getElementById("G_addButton").addEventListener("click",() => {
+  const number = document.querySelector("#memberNumber");
+  console.log(number.textContent);
+  localStorage.setItem("memberNumber", Number(number.textContent));
+  let dropdown = document.getElementById("group_num");
+  const form = document.getElementById("myForm");
+  for (let i = 0; i < form.elements.length; i++) {
+    const element = form.elements[i];
+    if (element.type !== "button") {
+      if (element.type === "select-one") {
+        localStorage.setItem(
+          element.name + String(i),
+          element.options[element.selectedIndex].value
+        );
+      } else {
+        localStorage.setItem(element.name + String(i), element.value);
+      }
+    }
+  }
+});
+
+// ローカルストレージからフォームの内容を読み込み
+function loadForm() {
+  const form = document.getElementById("myForm");
+  const member_number = localStorage.getItem("memberNumber");
+  for (let i = 0; i < member_number-4; i++){
+    addMember();
+    if (count < 12) {
+      count++;
+    }
+    addOption();
+    number.innerHTML = count;
+    if (count == 12) {
+      plusButton.disabled = true;
+      plusButton.style.background = "#323338";
+    }
+    if (count != 4) {
+      reduceButton.disabled = false;
+      reduceButton.style.background = "rgb(255, 133, 133)";
+    } else {
+      reduceButton.disabled = true;
+      reduceButton.style.background = "#323338";
+    }
+  }
+    for (let i = 0; i < form.elements.length; i++) {
+      const element = form.elements[i];
+      if (element.type !== "button") {
+        const storedValue = localStorage.getItem(
+          element.name + String(i)
+        );
+        if (storedValue !== null) {
+          if (element.type === "select-one") {
+            element.value = storedValue;
+          } else {
+            element.value = storedValue;
+          }
+        }
+      }
+    }
+}
+//保持された入力情報の初期化
+function clearStorage() {
+  localStorage.clear();
+  location.reload();
 }

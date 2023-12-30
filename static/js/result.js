@@ -6,11 +6,21 @@ document.getElementById("go-back").addEventListener("click", () => {
 var number_of_groups = document.getElementById("number_of_groups").innerHTML;
 
 document.getElementById("share-result").addEventListener("click", () => {
+  //スクショ用ヘッダーの表示
+  var Scsho_header_content = document.getElementById("fix_component2");
+  Scsho_header_content.style.display = "block";
+  //元のヘッダーの非表示
+  var header_content = document.getElementById("fix_component");
+  header_content.style.display = "none";
   //時間かかるため状態表示
-  document.getElementById('share-result').innerHTML = '共有中...';
-  //長いため別関数へ
-  generatePicture().then(function(resultBlob) {
+  const nowshare=document.getElementById("share-result")
+  nowshare.innerHTML = "共有中...";
+  nowshare.style.background = "#323338";
+  nowshare.style.color = "#929292";
+  nowshare.disabled = true;
 
+  //長いため別関数へ
+  generatePicture().then(function (resultBlob) {
     //入力されたグループ名を画像内で一体化させたかった　の後処理
     /* 
     for (var i = 0; i < number_of_groups; i++) {
@@ -28,27 +38,36 @@ document.getElementById("share-result").addEventListener("click", () => {
     if (navigator.canShare && navigator.canShare({ files: [image] })) {
       //共有
       navigator.share({
-        title: 'n人組を共有',
-        text: '作成したグループを共有',
-        url: document.getElementById('toppage').href,
+        title: "n人組を共有",
+        text: "作成したグループを共有",
+        url: document.getElementById("toppage").href,
         files: [image],
-      })
+      });
     } else {
       //共有利用不可の場合、画像を保存させる(MacのChrome等)
       image = null;
-      var filename = number_of_groups + 'groups-result.png';
+      var filename = number_of_groups + "groups-result.png";
       saveAs(resultBlob, filename);
-      window.alert('結果を保存しました！');
+      window.alert("結果を保存しました！");
     }
     //ボタンを元に戻す
-    document.getElementById('share-result').innerHTML = '結果を共有';
+    // document.getElementById("share-result").innerHTML = "結果を保存";
+    nowshare.innerHTML = "結果を共有";
+    nowshare.style.background = "#f09937";
+    nowshare.style.color = "#f4e997";
+    nowshare.disabled = false;
+    //スクショ用ヘッダーの非表示
+    var Scsho_header_content = document.getElementById("fix_component2");
+    Scsho_header_content.style.display = "none";
+    //元のヘッダーの表示
+    var header_content = document.getElementById("fix_component");
+    header_content.style.display = "block";
   });
 });
 
 //結果画面を画像化する
 //@return Blob
 function generatePicture() {
-
   //入力されたグループ名を画像内で一体化させたかった
   /*
     var group_names = [];
@@ -65,51 +84,40 @@ function generatePicture() {
       wrapper.appendChild(group_names[i]);
     }
     */
+  //#scshoAreaをスクショの対象
+  var content = document.getElementById("scshoArea");
+  // //スクショの解像度は横1080pxとする
+  // var currentWidth = Number(
+  //   getComputedStyle(document.getElementById("scshoArea")).width.replace("px", "")
+  // );
+  // //解像度調整のための倍率算出
+  // var scale = 1080 / currentWidth;
 
-  //body全体をスクショの対象
-  var content = document.getElementById('body');
-
-  //現在のbody横pxを取得
-  var currentWidth = Number(getComputedStyle(document.getElementById('body')).width.replace('px', ''));
-  
-  //現在のbody縦pxを算出
-  var wrappersHeight = number_of_groups * Number(getComputedStyle(document.getElementById('group0_wrapper')).height.replace('px', ''));
-  var fixHeight = Number(getComputedStyle(document.getElementById('fix_component')).height.replace('px', ''));
-  var estimatedHeight = 20 + (fixHeight + wrappersHeight);
-
-  var estimatedWidth = 0;
-  var scale = 0;
-
-  if(currentWidth > estimatedHeight){
-    if(currentWidth >= 1920) {
-      scale = 1;
-      estimatedWidth = currentWidth;
-    }else{
-      scale = 1920 / currentWidth;
-      estimatedWidth = 1920;
-    }
-  }else{
-    if(currentWidth >= 1080){
-      scale = 1;
-      estimatedWidth = currentWidth;
-    }else{
-      //解像度調整のための倍率算出
-      scale = 1080 / currentWidth;
-      estimatedWidth = 1080;
-    }
-  }
-
-  
-
-  
+  // //スクショの最適な縦pxを算出
+  // var wrapperHeight =
+  //   scale *
+  //   Number(
+  //     getComputedStyle(
+  //       document.getElementById("group0_wrapper")
+  //     ).height.replace("px", "")
+  //   );
+  // var estimatedHeight =
+  //   scale *
+  //   Number(
+  //     getComputedStyle(document.getElementById("fix_component2")).height.replace(
+  //       "px",
+  //       ""
+  //     )
+  //   );
+  // estimatedHeight = estimatedHeight + 20 + number_of_groups * wrapperHeight;
 
   //dom-to-imageでスクショ化を開始
   return domtoimage.toBlob(content, {
-    width: estimatedWidth,
-    height: estimatedHeight * scale,
-    style: {
-      transform: 'scale(' + scale + ')',
-      transformOrigin: 'top left'
-    }
+    // width: 1080,
+    // height: estimatedHeight,
+    // style: {
+    //   transform: "scale(" + scale + ")",
+    //   transformOrigin: "top left",
+    // },
   });
 }
