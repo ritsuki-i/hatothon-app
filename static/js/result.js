@@ -112,7 +112,7 @@ function generatePicture() {
   // estimatedHeight = estimatedHeight + 20 + number_of_groups * wrapperHeight;
 
   //dom-to-imageでスクショ化を開始
-  return domtoimage.toBlob(content, {
+  return domtoimage.toPng(content, {
     // width: 1080,
     // height: estimatedHeight,
     // style: {
