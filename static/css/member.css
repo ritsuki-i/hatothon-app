@@ -82,9 +82,9 @@ body {
 
 #removeButton {
   touch-action: manipulation;
-  width: auto;
-  height: auto;
-  border-radius: 100%;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
   background-color: rgb(255, 113, 113);
   color: #ffffff;
   text-align: center;
@@ -92,9 +92,9 @@ body {
 
 #addButton {
   touch-action: manipulation;
-  width: auto;
-  height: auto;
-  border-radius: 100%;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
   background-color: rgb(113, 190, 255);
   color: #ffffff;
   text-align: center;
