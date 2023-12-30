@@ -84,7 +84,7 @@ body {
   touch-action: manipulation;
   height: 13vw;
   width: 13vw;
-  border-radius: 50%;
+  border-radius: 100%;
   font-size: 240%;
   background-color: rgb(255, 113, 113);
   color: #ffffff;
@@ -94,7 +94,7 @@ body {
   touch-action: manipulation;
   height: 13vw;
   width: 13vw;
-  border-radius: 50%;
+  border-radius: 100%;
   font-size: 240%;
   background-color: rgb(113, 190, 255);
   color: #ffffff;
@@ -127,7 +127,7 @@ body {
 }
 
 #AR_Button {
-  padding-top: 5vh;
+  padding-top: 2vh;
   display: flex;
   justify-content: space-evenly;
   margin-left: 4vh;
