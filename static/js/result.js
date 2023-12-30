@@ -52,7 +52,7 @@ document.getElementById("share-result").addEventListener("click", () => {
     }
     //ボタンを元に戻す
     // document.getElementById("share-result").innerHTML = "結果を保存";
-    nowshare.innerHTML = "結果を保存";
+    nowshare.innerHTML = "結果を共有";
     nowshare.style.background = "#f09937";
     nowshare.style.color = "#f4e997";
     nowshare.disabled = false;

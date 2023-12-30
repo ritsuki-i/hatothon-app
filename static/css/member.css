@@ -63,15 +63,16 @@ body {
 }
 
 #G_addButton {
+  touch-action: manipulation;
   margin: auto;
   background-color: #323338;
   color: #929292;
   border-radius: 15px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   /* font-weight: bold; */
-  font-size: 180%;
-  height: 50px;
-  width: 200px;
+  font-size: 160%;
+  height: 12vw;
+  width: 52vw;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -80,8 +81,9 @@ body {
 }
 
 #removeButton {
-  height: 50px;
-  width: 50px;
+  touch-action: manipulation;
+  height: 13vw;
+  width: 13vw;
   border-radius: 50%;
   font-size: 240%;
   background-color: rgb(255, 113, 113);
@@ -89,8 +91,9 @@ body {
 }
 
 #addButton {
-  height: 50px;
-  width: 50px;
+  touch-action: manipulation;
+  height: 13vw;
+  width: 13vw;
   border-radius: 50%;
   font-size: 240%;
   background-color: rgb(113, 190, 255);
@@ -115,32 +118,33 @@ body {
 }
 
 #group_num {
-  margin-top: 14%;
-  width: 70%;
-  height: 46%;
+  margin-top: 12.5%;
+  width: 100%;
+  height: 50%;
   border-radius: 8px;
-  font-size: 160%;
+  font-size: 120%;
   text-align: center;
 }
 
 #AR_Button {
+  margin-top: 2vh;
   display: flex;
-  position: absolute;
-  left: 0;
-  right: 0;
+  justify-content: space-evenly;
+  margin-left: 4vh;
+  margin-right: 4vh;
 }
 
-#AR_Button_parent {
+/* #AR_Button_parent {
   position: relative;
   margin: auto;
   margin-top: 2vh;
   width: 273px;
   height: 50px;
-}
+} */
 
-#restNum_Display {
+/* #restNum_Display {
   margin: auto;
-}
+} */
 
 #dropdown {
   width: 54px;
@@ -151,6 +155,8 @@ body {
 
 .fix_component_bottom {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   bottom: 0;
   width: 100vw;
   background-color: #323338;
@@ -199,13 +205,14 @@ hr {
 }
 
 #ButtonValid {
+  touch-action: manipulation;
   margin: auto;
   background-color: #f09937;
   color: #f4e997;
   border-radius: 15px;
-  font-size: 180%;
-  height: 50px;
-  width: 200px;
+  font-size: 160%;
+  height: 12vw;
+  width: 52vw;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   position: absolute;
   top: 0;
@@ -216,6 +223,7 @@ hr {
 
 #error_message {
   color: rgb(255, 0, 0);
+  margin: auto;
 }
 
 html {

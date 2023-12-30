@@ -229,6 +229,7 @@ input {
 }
 
 #go-back {
+  touch-action: manipulation;
   margin-top: 5%;
   margin-bottom: 10%;
   background-color: #154e6f;
@@ -236,7 +237,7 @@ input {
   border-radius: 14px;
   font-size: 120%;
   height: 40px;
-  width: 120px;
+  width: 150px;
   font-family: "M PLUS Rounded 1c", sans-serif;
   /* font-weight: bold; */
   /* position: fixed;
@@ -247,6 +248,7 @@ input {
 }
 
 #share-result {
+  touch-action: manipulation;
   margin-top: 5%;
   margin-bottom: 10%;
   background-color: #f09937;
@@ -254,7 +256,7 @@ input {
   border-radius: 14px;
   font-size: 120%;
   height: 40px;
-  width: 120px;
+  width: 150px;
   font-family: "M PLUS Rounded 1c", sans-serif;
   /* font-weight: bold; */
   /* position: fixed;
