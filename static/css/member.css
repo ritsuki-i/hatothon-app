@@ -81,10 +81,9 @@ body {
 }
 
 #removeButton {
-  -webkit-appearance: none;
   touch-action: manipulation;
-  height: 13vw;
-  width: 13vw;
+  width: auto;
+  height: auto;
   border-radius: 100%;
   font-size: 240%;
   background-color: rgb(255, 113, 113);
@@ -93,10 +92,9 @@ body {
 }
 
 #addButton {
-  -webkit-appearance: none;
   touch-action: manipulation;
-  height: 13vw;
-  width: 13vw;
+  width: auto;
+  height: auto;
   border-radius: 100%;
   font-size: 240%;
   background-color: rgb(113, 190, 255);
@@ -240,4 +238,5 @@ form {
 
 .material-symbols-outlined {
   text-align: center;
+  font-size: xx-large;
 }
