@@ -81,6 +81,7 @@ body {
 }
 
 #removeButton {
+  -webkit-appearance: none;
   touch-action: manipulation;
   height: 13vw;
   width: 13vw;
@@ -92,6 +93,7 @@ body {
 }
 
 #addButton {
+  -webkit-appearance: none;
   touch-action: manipulation;
   height: 13vw;
   width: 13vw;
