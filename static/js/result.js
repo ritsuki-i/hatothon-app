@@ -68,20 +68,45 @@ function generatePicture() {
 
   //body全体をスクショの対象
   var content = document.getElementById('body');
-  //スクショの解像度は横1080pxとする
-  var currentWidth = Number(getComputedStyle(document.getElementById('body')).width.replace('px', ''));
-  //解像度調整のための倍率算出
-  var scale = 1080 / currentWidth;
 
-  //スクショの最適な縦pxを算出
-  var wrapperHeight = scale * Number(getComputedStyle(document.getElementById('group0_wrapper')).height.replace('px', ''));
-  var estimatedHeight = scale * Number(getComputedStyle(document.getElementById('fix_component')).height.replace('px', ''));
-  estimatedHeight = estimatedHeight + 20 + number_of_groups * wrapperHeight;
+  //現在のbody横pxを取得
+  var currentWidth = Number(getComputedStyle(document.getElementById('body')).width.replace('px', ''));
+  
+  //現在のbody縦pxを算出
+  var wrappersHeight = number_of_groups * Number(getComputedStyle(document.getElementById('group0_wrapper')).height.replace('px', ''));
+  var fixHeight = Number(getComputedStyle(document.getElementById('fix_component')).height.replace('px', ''));
+  var estimatedHeight = 20 + (fixHeight + wrappersHeight);
+
+  var estimatedWidth = 0;
+  var scale = 0;
+
+  if(currentWidth > estimatedHeight){
+    if(currentWidth >= 1920) {
+      scale = 1;
+      estimatedWidth = currentWidth;
+    }else{
+      scale = 1920 / currentWidth;
+      estimatedWidth = 1920;
+    }
+  }else{
+    if(currentWidth >= 1080){
+      scale = 1;
+      estimatedWidth = currentWidth;
+    }else{
+      //解像度調整のための倍率算出
+      scale = 1080 / currentWidth;
+      estimatedWidth = 1080;
+    }
+  }
+
+  
+
+  
 
   //dom-to-imageでスクショ化を開始
   return domtoimage.toBlob(content, {
-    width: 1080,
-    height: estimatedHeight,
+    width: estimatedWidth,
+    height: estimatedHeight * scale,
     style: {
       transform: 'scale(' + scale + ')',
       transformOrigin: 'top left'
