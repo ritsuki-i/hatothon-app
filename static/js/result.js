@@ -111,13 +111,19 @@ function generatePicture() {
   //   );
   // estimatedHeight = estimatedHeight + 20 + number_of_groups * wrapperHeight;
 
+  //dom-to-imageでiosの場合に限りhtml要素の一部の画像が取得できない問題、解決策を数多のサイトから探した結果、ついに解決。
+  //解決案:dom-to-imageをアホみたいに何回も呼び出す。
+  //記念すべき解決日時 2023-12-30 23:39
+  //解決案を見つけたページ https://github.com/tsayen/dom-to-image/issues/343
+  domtoimage.toBlob(content, {
+  });
+  domtoimage.toBlob(content, {
+  });
+  domtoimage.toBlob(content, {
+  });
+  domtoimage.toBlob(content, {
+  });
   //dom-to-imageでスクショ化を開始
-  return domtoimage.toPng(content, {
-    // width: 1080,
-    // height: estimatedHeight,
-    // style: {
-    //   transform: "scale(" + scale + ")",
-    //   transformOrigin: "top left",
-    // },
+  return domtoimage.toBlob(content, {
   });
 }
