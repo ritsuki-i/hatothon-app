@@ -85,7 +85,6 @@ body {
   width: auto;
   height: auto;
   border-radius: 100%;
-  font-size: 240%;
   background-color: rgb(255, 113, 113);
   color: #ffffff;
   text-align: center;
@@ -96,7 +95,6 @@ body {
   width: auto;
   height: auto;
   border-radius: 100%;
-  font-size: 240%;
   background-color: rgb(113, 190, 255);
   color: #ffffff;
   text-align: center;
@@ -238,5 +236,5 @@ form {
 
 .material-symbols-outlined {
   text-align: center;
-  font-size: xx-large;
+  font-size: x-large;
 }
