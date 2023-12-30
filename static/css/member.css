@@ -88,6 +88,8 @@ body {
   background-color: rgb(255, 113, 113);
   color: #ffffff;
   text-align: center;
+  padding-inline: 0 !important;
+  padding-block: 0!important;
 }
 
 #addButton {
@@ -98,6 +100,8 @@ body {
   background-color: rgb(113, 190, 255);
   color: #ffffff;
   text-align: center;
+  padding-inline: 0 !important;
+  padding-block: 0!important;
 }
 
 #GB_parent {
@@ -222,7 +226,7 @@ hr {
 }
 
 #error_message {
-  color: rgb(255, 0, 0);
+  color: rgb(255, 60, 60);
   margin: auto;
 }
 
