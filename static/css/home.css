@@ -147,7 +147,7 @@ a {
 }
 
 /* se */
-@media screen and (max-width: 375px) and (max-height:700px) {
+@media screen and (max-width: 375px) and (max-height:550px) {
   .main {
     margin-top: 40px;
   }
@@ -164,7 +164,7 @@ a {
 }
 
 /* mini */
-@media screen and (max-width: 375px) and (min-height:700px){
+@media screen and (max-width: 375px) and (min-height:550px){
   .main {
     margin-top: 40px;
   }
