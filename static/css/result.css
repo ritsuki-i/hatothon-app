@@ -233,7 +233,7 @@ input {
 #go-back {
   touch-action: manipulation;
   background-color: #154e6f;
-  color: #bfd7ea;
+  color: #ffffff;
   border-radius: 14px;
   font-size: 120%;
   height: 40px;
@@ -250,7 +250,7 @@ input {
 #share-result {
   touch-action: manipulation;
   background-color: #f09937;
-  color: #f4e997;
+  color: #ffffff;
   border-radius: 14px;
   font-size: 120%;
   height: 40px;
