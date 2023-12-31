@@ -103,6 +103,7 @@ body {
   flex-direction: column;
   height: 100vh;
   position: relative;
+  overflow: hidden;
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
@@ -231,8 +232,6 @@ input {
 
 #go-back {
   touch-action: manipulation;
-  margin-top: 5%;
-  margin-bottom: 5%;
   background-color: #154e6f;
   color: #bfd7ea;
   border-radius: 14px;
@@ -250,8 +249,6 @@ input {
 
 #share-result {
   touch-action: manipulation;
-  margin-top: 5%;
-  margin-bottom: 5%;
   background-color: #f09937;
   color: #f4e997;
   border-radius: 14px;
@@ -267,6 +264,11 @@ input {
   right: 0; */
 }
 
+button {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 form {
   display: flex;
   justify-content: space-evenly;
@@ -275,6 +277,46 @@ form {
 #fix_component2 {
   display: none;
   background-color: #323338;
+}
+
+/* ProMax,Plus */
+@media screen and (max-width: 430px) {
+  form {
+    margin-bottom: 82px;
+  }
+  button {
+    margin-top: 4%;
+  }
+}
+
+/* Pro,muji */
+@media screen and (max-width: 414px) {
+  form {
+    margin-bottom: 80px;
+  }
+  button {
+    margin-top: 4%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  form {
+    margin-bottom: 77px;
+  }
+  button {
+    margin-top: 4%;
+  }
+}
+
+/* se,mini */
+@media screen and (max-width: 375px) {
+  form {
+    margin-bottom: 75px;
+  }
+  button {
+    margin-top: 4%;
+  }
+
 }
 
 /* html {
