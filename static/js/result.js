@@ -73,9 +73,14 @@ document.getElementById("share-result").addEventListener("click", () => {
     //チーム名編集ボタンの表示
     for (l = 0; l < number_of_groups; l++) {
       const gnameon = document.getElementById(l);
-      gnameon.style.display = "inline";
       const textdis2 = document.getElementById("group" + l + "_name");
-      textdis2.style.display = "none";
+      if (textdis2.value == "") {
+        textdis2.style.display = "none";
+        gnameon.style.display = "inline";
+      }else {
+        textdis2.style.display = "inline";
+        gnameon.style.display = "none";
+      }
     }
   });
 });

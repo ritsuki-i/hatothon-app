@@ -78,6 +78,35 @@
   background-color: #264653;
 }
 
+#\30 {
+  background-color: #e76f51;
+  color: #ffffff;
+}
+
+#\31 {
+  background-color: #f4a261;
+  color: #ffffff;
+}
+
+#\32 {
+  background-color: #e9c46a;
+  color: #ffffff;
+}
+
+#\33 {
+  background-color: #8ab17d;
+  color: #ffffff;
+}
+
+#\34 {
+  background-color: #2a9d8f;
+  color: #ffffff;
+}
+
+#\35 {
+  background-color: #264653;
+  color: #ffffff;
+}
 /* .name-wrapper{
     width: 50%;
     display: flex;
@@ -294,15 +323,24 @@ form {
   }
 }
 
-/* se,mini */
-@media screen and (max-width: 375px) {
+/* se */
+@media screen and (max-width: 375px) and (max-height:550px) {
   form {
     margin-bottom: 75px;
   }
   button {
     margin-top: 4%;
   }
+}
 
+/* mini */
+@media screen and (max-width: 375px) and (min-height:550px){
+  form {
+    margin-bottom: 79px;
+  }
+  button {
+    margin-top: 4%;
+  }
 }
 
 /* html {
