@@ -6,12 +6,6 @@ document.getElementById("go-back").addEventListener("click", () => {
 var number_of_groups = document.getElementById("number_of_groups").innerHTML;
 
 document.getElementById("share-result").addEventListener("click", () => {
-  //スクショ用ヘッダーの表示
-  var Scsho_header_content = document.getElementById("fix_component2");
-  Scsho_header_content.style.display = "block";
-  //元のヘッダーの非表示
-  var header_content = document.getElementById("fix_component");
-  header_content.style.display = "none";
   //チーム名編集ボタンの非表示
   for (j = 0; j < number_of_groups; j++) {
     const gnameon0 = document.getElementById(j);
@@ -19,6 +13,12 @@ document.getElementById("share-result").addEventListener("click", () => {
     const textdis1 = document.getElementById("group" + j + "_name");
     textdis1.style.display = "inline";
   }
+  //スクショ用ヘッダーの表示
+  var Scsho_header_content = document.getElementById("fix_component2");
+  Scsho_header_content.style.display = "block";
+  //元のヘッダーの非表示
+  var header_content = document.getElementById("fix_component");
+  header_content.style.display = "none";
 
   //時間かかるため状態表示
   const nowshare = document.getElementById("share-result");
@@ -77,7 +77,7 @@ document.getElementById("share-result").addEventListener("click", () => {
       if (textdis2.value == "") {
         textdis2.style.display = "none";
         gnameon.style.display = "inline";
-      }else {
+      } else {
         textdis2.style.display = "inline";
         gnameon.style.display = "none";
       }
@@ -105,6 +105,7 @@ function generatePicture() {
     }
     */
   //#scshoAreaをスクショの対象
+  domtoimage.toBlob(document.getElementById("scshoArea"), {});
   var content = document.getElementById("scshoArea");
   // //スクショの解像度は横1080pxとする
   // var currentWidth = Number(
