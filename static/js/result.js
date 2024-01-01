@@ -106,6 +106,7 @@ function generatePicture() {
     */
   //#scshoAreaをスクショの対象
   domtoimage.toBlob(document.getElementById("scshoArea"), {});
+  var content = document.getElementById("scshoArea");
   domtoimage.toBlob(document.getElementById("scshoArea"), {});
   var content = document.getElementById("scshoArea");
   // //スクショの解像度は横1080pxとする
@@ -138,7 +139,9 @@ function generatePicture() {
   //記念すべき解決日時 2023-12-30 23:39
   //解決案を見つけたページ https://github.com/tsayen/dom-to-image/issues/343
   domtoimage.toBlob(content, {});
+  var content = document.getElementById("scshoArea");
   domtoimage.toBlob(content, {});
+  var content = document.getElementById("scshoArea");
   //dom-to-imageでスクショ化を開始
   return domtoimage.toBlob(content, {});
 }
