@@ -305,16 +305,20 @@ function InDeButtonControl() {
   if (count == 12) {
     plusButton.disabled = true;
     plusButton.style.background = "#323338";
+    plusButton.style.color = "#929292";
   } else {
     plusButton.disabled = false;
-    plusButton.style.background = "rgb(133, 210, 255)";
+    plusButton.style.background = "rgb(103, 180, 255)";
+    plusButton.style.color = "#ffffff";
   }
   if (count == 4) {
     reduceButton.disabled = true;
     reduceButton.style.background = "#323338";
+    reduceButton.style.color = "#929292";
   } else {
     reduceButton.disabled = false;
-    reduceButton.style.background = "rgb(255, 133, 133)";
+    reduceButton.style.background = "rgb(255, 103, 103)";
+    reduceButton.style.color = "#ffffff";
   }
 }
 
@@ -390,7 +394,6 @@ function checkDropdowns() {
   error_message.hidden = !areAllDropdownsSelected();
 }
 
-
 // ページ読み込み時にフォームの内容をロード
 window.onload = function () {
   loadForm();
@@ -463,6 +466,7 @@ function loadForm() {
       }
     }
 }
+
 //保持された入力情報の初期化
 function clearStorage() {
   localStorage.clear();

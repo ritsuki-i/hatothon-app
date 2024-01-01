@@ -39,7 +39,6 @@ a {
   margin: 10% auto;
   border-radius: 12px;
   background-color: #f29d35;
-  color: #f4e997;
 }
 
 .option2 {
@@ -47,15 +46,14 @@ a {
   margin: 0 auto;
   border-radius: 12px;
   background-color: #154e6f;
-  color: #bfd7ea;
 }
 
 #group_make {
-  color: #f4e997;
+  color: #ffffff;
 }
 
 #how {
-  color: #bfd7ea;
+  color: #ffffff;
 }
 
 #option {
@@ -173,7 +171,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
-    margin-top: 36%;
+    margin-top: 42%;
   }
   h1 {
     font-size: 190%;

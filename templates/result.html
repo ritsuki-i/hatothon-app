@@ -78,13 +78,16 @@
       </div>
       {% for group_name in groups_name %}
       <div class="group-wrapper" id="group{{ loop.index0 }}_wrapper">
-        <input
-          id="group{{ loop.index0 }}_name"
-          type="text"
-          class="group_name"
-          placeholder="グループ名"
-          maxlength="6"
-        />
+        <div id="group-name-wrapper">
+          <button id="{{ loop.index0 }}" onclick="editpush(id)" class="editbutton"><span class="material-symbols-outlined"> edit </span></button>
+          <input
+            id="group{{ loop.index0 }}_name"
+            type="text"
+            class="group_name"
+            placeholder="グループ{{ loop.index }}"
+            maxlength="6"
+          />
+        </div>
         <div class="wrapper">
           {% for name in group_name %}
           <div class="member-wrapper">
