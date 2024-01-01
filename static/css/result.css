@@ -107,10 +107,6 @@ body {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-input {
-  width: 20%;
-}
-
 .number {
   text-align: center;
   overflow-y: scroll;
@@ -169,7 +165,7 @@ input {
 }
 
 #group_text {
-  margin-left: 6%;
+  margin-left: 6.5%;
 }
 
 #MG_text {
@@ -181,16 +177,6 @@ hr {
   height: 1px;
   background-color: #bbbbbb;
   border: none;
-}
-
-input {
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 87px;
-  border-radius: 6px;
-  margin-left: 2%;
-  padding-right: 1px;
-  padding-left: 8px;
 }
 
 #fix_component {
@@ -322,3 +308,42 @@ form {
 /* html {
     height: 100%;
 } */
+
+input {
+	background: none;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+  display: none;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.editbutton {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.editbutton_none {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  border-radius: 6px;
+  display: none;
+}
+
+#group-name-wrapper {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 4px;
+  margin-right: 0;
+  width: 143px;
+}
+

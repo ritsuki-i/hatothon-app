@@ -12,8 +12,16 @@ document.getElementById("share-result").addEventListener("click", () => {
   //元のヘッダーの非表示
   var header_content = document.getElementById("fix_component");
   header_content.style.display = "none";
+  //チーム名編集ボタンの非表示
+  for (j = 0; j < number_of_groups; j++) {
+    const gnameon0 = document.getElementById(j);
+    gnameon0.style.display = "none";
+    const textdis1 = document.getElementById("group" + j + "_name");
+    textdis1.style.display = "inline";
+  }
+
   //時間かかるため状態表示
-  const nowshare=document.getElementById("share-result")
+  const nowshare = document.getElementById("share-result");
   nowshare.innerHTML = "共有中...";
   nowshare.style.background = "#323338";
   nowshare.style.color = "#929292";
@@ -62,6 +70,13 @@ document.getElementById("share-result").addEventListener("click", () => {
     //元のヘッダーの表示
     var header_content = document.getElementById("fix_component");
     header_content.style.display = "block";
+    //チーム名編集ボタンの表示
+    for (l = 0; l < number_of_groups; l++) {
+      const gnameon = document.getElementById(l);
+      gnameon.style.display = "inline";
+      const textdis2 = document.getElementById("group" + l + "_name");
+      textdis2.style.display = "none";
+    }
   });
 });
 
@@ -115,15 +130,18 @@ function generatePicture() {
   //解決案:dom-to-imageをアホみたいに何回も呼び出す。
   //記念すべき解決日時 2023-12-30 23:39
   //解決案を見つけたページ https://github.com/tsayen/dom-to-image/issues/343
-  domtoimage.toBlob(content, {
-  });
-  domtoimage.toBlob(content, {
-  });
-  domtoimage.toBlob(content, {
-  });
-  domtoimage.toBlob(content, {
-  });
+  domtoimage.toBlob(content, {});
+  domtoimage.toBlob(content, {});
+  domtoimage.toBlob(content, {});
   //dom-to-imageでスクショ化を開始
-  return domtoimage.toBlob(content, {
-  });
+  return domtoimage.toBlob(content, {});
+}
+
+function editpush(content) {
+  console.log(content);
+  const editbutton = document.getElementById(content);
+  editbutton.style.display = "none";
+  const textdis = document.getElementById("group" + content + "_name");
+  textdis.style.display = "inline";
+  textdis.focus();
 }

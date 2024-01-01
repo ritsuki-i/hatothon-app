@@ -394,7 +394,6 @@ function checkDropdowns() {
   error_message.hidden = !areAllDropdownsSelected();
 }
 
-
 // ページ読み込み時にフォームの内容をロード
 window.onload = function () {
   loadForm();
@@ -467,6 +466,7 @@ function loadForm() {
       }
     }
 }
+
 //保持された入力情報の初期化
 function clearStorage() {
   localStorage.clear();
