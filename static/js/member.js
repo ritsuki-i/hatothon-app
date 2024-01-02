@@ -441,13 +441,16 @@ function loadForm() {
     if (count == 12) {
       plusButton.disabled = true;
       plusButton.style.background = "#323338";
+      plusButton.style.color = "#929292";
     }
     if (count != 4) {
       reduceButton.disabled = false;
       reduceButton.style.background = "rgb(255, 133, 133)";
+      reduceButton.style.color = "#ffffff";
     } else {
       reduceButton.disabled = true;
       reduceButton.style.background = "#323338";
+      reduceButton.style.color = "#929292";
     }
   }
     for (let i = 0; i < form.elements.length; i++) {

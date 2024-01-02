@@ -62,7 +62,7 @@ document.getElementById("share-result").addEventListener("click", () => {
     // document.getElementById("share-result").innerHTML = "結果を保存";
     nowshare.innerHTML = "結果を共有";
     nowshare.style.background = "#f09937";
-    nowshare.style.color = "#f4e997";
+    nowshare.style.color = "#ffffff";
     nowshare.disabled = false;
     //スクショ用ヘッダーの非表示
     var Scsho_header_content = document.getElementById("fix_component2");
@@ -147,7 +147,6 @@ function generatePicture() {
 }
 
 function editpush(content) {
-  console.log(content);
   const editbutton = document.getElementById(content);
   editbutton.style.display = "none";
   const textdis = document.getElementById("group" + content + "_name");
