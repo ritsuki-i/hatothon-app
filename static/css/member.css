@@ -206,3 +206,32 @@ form {
   text-align: center;
   font-size: x-large;
 }
+
+/* PC */
+@media screen and (min-width: 700px) and (max-width: 5000px) {
+  #ButtonValid {
+    font-size: 160%;
+    height: 50px;
+    width: 220px;
+    margin-top: 10px;
+  }
+  #G_addButton {
+    font-size: 160%;
+    height: 50px;
+    width: 220px;
+  }
+  #addButton {
+    width: 6vh;
+    height:6vh;
+  }
+  #removeButton {
+    width: 6vh;
+    height: 6vh;
+  }
+  #restNum_Display {
+    font-size: larger;
+  }
+  #error_message {
+    font-size: larger;
+  }
+}

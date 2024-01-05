@@ -2,6 +2,7 @@ body {
   background-color: #202020;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 500;
+  height: 100%;
 }
 
 .main {
@@ -26,26 +27,30 @@ a {
 }
 
 .main img {
-  width: 150px;
-  height: 150px;
+  width: 27vh;
+  height: 27vh;
 }
 
 .main h2 {
   text-align: center;
+  font-size: 150%;
 }
 
 .option1 {
-  width: 200px;
   margin: 10% auto;
   border-radius: 12px;
   background-color: #f29d35;
+  width: 260px;
+  height: 55px;
 }
 
 .option2 {
-  width: 200px;
+  width: 80%;
   margin: 0 auto;
   border-radius: 12px;
   background-color: #154e6f;
+  width: 260px;
+  height: 55px;
 }
 
 #group_make {
@@ -63,26 +68,38 @@ a {
   width: fit-content;
 }
 
-@media screen and (max-width: 500px) {
-  .main {
-    margin-top: 50%;
+/* PC */
+@media screen and (min-width: 700px) and (max-width: 5000px) {
+  body {
+    margin: 0;
+    margin-top: 8%;
   }
-
-  h1 {
-    font-size: 220%;
+  #option {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    scale: 130%;
+    margin-top: 10vh;
   }
-
-  div {
-    width: 80%;
+  .option1 {
+    margin: 0;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
   }
+  .option2 {
+    margin: 0;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
 
-  div a h2 {
-    font-size: 150%;
   }
-
-  .main img {
-    width: 60%;
-    height: 60%;
+  .main h1 {
+    font-size: 50px;
   }
 }
 
@@ -92,22 +109,14 @@ a {
     margin-top: 70px;
   }
   #option {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    margin-top: 50%;
+    margin-top: 48%;
   }
   h1 {
     font-size: 220%;
   }
-  .option1 {
-    width: 260px;
-    height: 55px;
-  }
-  .option2 {
-    width: 260px;
-    height: 55px;
+  .main img {
+    width: 60%;
+    height: 60%;
   }
 }
 
@@ -117,14 +126,14 @@ a {
     margin-top: 60px;
   }
   #option {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
     margin-top: 40%;
   }
   h1 {
     font-size: 200%;
+  }
+  .main img {
+    width: 60%;
+    height: 60%;
   }
 }
 
@@ -133,14 +142,14 @@ a {
     margin-top: 140px;
   }
   #option {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
     margin-top: 36%;
   }
   h1 {
     font-size: 200%;
+  }
+  .main img {
+    width: 60%;
+    height: 60%;
   }
 }
 
@@ -150,14 +159,14 @@ a {
     margin-top: 40px;
   }
   #option {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
     margin-top: 20%;
   }
   h1 {
     font-size: 190%;
+  }
+  .main img {
+    width: 60%;
+    height: 60%;
   }
 }
 
@@ -167,13 +176,13 @@ a {
     margin-top: 40px;
   }
   #option {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
     margin-top: 42%;
   }
   h1 {
     font-size: 190%;
+  }
+  .main img {
+    width: 60%;
+    height: 60%;
   }
 }
