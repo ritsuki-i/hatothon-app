@@ -19,6 +19,7 @@ img {
 body {
   background-color: #323338;
   font-family: "M PLUS Rounded 1c", sans-serif;
+  touch-action: manipulation;
   /* font-weight: 700; */
   text-align: center;
   position: relative;
@@ -234,6 +235,7 @@ form {
   height: 100%;
   display: flex;
   flex-direction: column;
+  touch-action: manipulation;
 }
 
 .material-symbols-outlined {
