@@ -38,10 +38,33 @@ body {
 }
 
 .main h2 {
-  background-color: black;
   border-right: solid 5px;
   padding-right: 15px;
   text-align: right;
+}
+
+#s1 {
+  background-color: #e76f51;
+}
+
+#s2 {
+  background-color: #f4a261;
+}
+
+#s3 {
+  background-color: #e9c46a;
+}
+
+#s4 {
+  background-color: #8ab17d;
+}
+
+#s5 {
+  background-color: #2a9d8f;
+}
+
+#s6 {
+  background-color: #264653;
 }
 
 /* PC */
