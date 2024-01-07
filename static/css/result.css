@@ -401,4 +401,13 @@ input {
     width: 180px;
     font-size: x-large;
   }
+  #group-name-wrapper {
+    margin-left: 2%;
+  }
+  #member_text {
+    margin-left: 40%;
+  }
+  #group_text {
+    margin-left: 5%;
+  }
 }
