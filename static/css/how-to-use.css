@@ -10,15 +10,14 @@ body {
 }
 
 .main {
-  width: 70%;
   max-width: 800px;
   margin: 0 auto;
+  width: 90%;
   margin-left: 0 !important;
 }
 
 .main img {
   width: 50%;
-  border: solid 2px;
   display: block;
   /*PC版はこれなし*/
   margin: 0 auto;
@@ -45,11 +44,15 @@ body {
   text-align: right;
 }
 
-@media screen and (max-width: 500px) {
+/* PC */
+@media screen and (min-width: 700px) and (max-width: 5000px) {
   .main {
-    width: 90%;
+    max-width: 800px;
     margin: 0 auto;
+    width: 85%;
+    margin-left: 0 !important;
   }
+
 }
 
 .main h4 {
