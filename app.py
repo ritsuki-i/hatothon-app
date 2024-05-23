@@ -50,22 +50,6 @@ def member():
 @app.route('/result',methods=['GET','POST'])
 def result():
     if request.method == 'POST':
-        """
-        INPUT = [ # 入力
-        ["くしら","ISFP"],
-        ["せいや","INTP"],
-        ["そらち","INTP"],
-        ["かいちょう","ESTP"],
-        ["ゆきの","INTJ"],
-        ["りつき","ISTJ"],
-        ["とわ","ISFJ"],
-        ["A","ENTJ"],
-        ["B","ISTP"],
-        ["C","ENTP"],
-        ["D","INTP"],
-        ["E","ISTJ"],
-        ]
-        """
         
         input = request.form.getlist('get_input')
         count = 0
