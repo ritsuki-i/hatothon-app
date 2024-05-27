@@ -39,5 +39,5 @@
 
 ## リンク
 
-- **-G-性格ぴったりグループ生成アプリ**: [https://g-xing-ge-pitsutarigurupusheng-cheng.onrender.com/](https://g-xing-ge-pitsutarigurupusheng-cheng.onrender.com/)
+- **-G-性格ぴったりグループ生成アプリ**: [https://hatothon-app.onrender.com/](https://hatothon-app.onrender.com/)
 - **GitHubリポジトリ**: [https://github.com/ritsuki-i/hatothon-app](https://github.com/ritsuki-i/hatothon-app)
