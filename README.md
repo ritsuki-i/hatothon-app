@@ -41,3 +41,14 @@
 
 - **-G-性格ぴったりグループ生成アプリ**: [https://hatothon-app.onrender.com/](https://hatothon-app.onrender.com/)
 - **GitHubリポジトリ**: [https://github.com/ritsuki-i/hatothon-app](https://github.com/ritsuki-i/hatothon-app)
+
+## 作成者
+
+- GitHub: [ritsuki-i](https://github.com/ritsuki-i)
+- GitHub: [kusira](https://github.com/kusira)
+- GitHub: [Sora_339](https://github.com/Sora_339)
+- GitHub: [Kamota3628](https://github.com/Kamota3628)
+- GitHub: [yanaaaaachan](https://github.com/yanaaaaachan)
+- GitHub: [towakun887](https://github.com/towakun887)
+
+
